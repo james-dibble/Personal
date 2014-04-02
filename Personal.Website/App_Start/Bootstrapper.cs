@@ -33,7 +33,6 @@ namespace Personal.Website
             container.RegisterType<DbContext, PersonalPersistenceContext>(new HierarchicalLifetimeManager());
             container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
             container.RegisterType<IPostService, PostService>();
-            container.RegisterType<ITwitterService, TwitterService>();
         }
     }
 }
