@@ -1,0 +1,29 @@
+﻿@model Portfolio
+@{
+    ViewBag.Title = string.Join(" - ", "James Dibble", "Portfolio", this.Model.Title);
+    ViewBag.Description = this.Model.Abstract;
+}
+@section Script
+{
+    <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
+}
+
+@foreach (var image in this.Model.Images)
+{
+    <div class="col-lg-3 cold-md-4 col-sm-6 col-xs-12 square animate">
+        <div class="image" data-src="@image.Path"></div>
+    </div>
+}
+@this.Html.Partial("PageTitle", string.Join(" - ", this.Model.Date.ToString("d MMMM yyyy"), this.Model.Title))
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p class="lead animate">@this.Model.Abstract</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="animate col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            @this.Html.Raw(this.Model.Content)
+        </div>
+    </div>
+</div>

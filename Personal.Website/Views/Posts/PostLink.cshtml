@@ -1,0 +1,25 @@
+﻿@model Post
+
+<a href="@this.Url.Action(this.Model is Blog ? "blog" : "portfolio", "posts", new { year = this.Model.Date.Year, month = this.Model.Date.Month, day = this.Model.Date.Day, title = this.Model.Title.ToLowerInvariant().Replace(' ', '-') })">
+    <div class="col-lg-3 cold-md-4 col-sm-6 col-xs-12 square animate @(this.Model is Portfolio ? "portfolio" : "")">
+        @if (this.Model is Portfolio)
+        {
+            <div class="image" data-src="@((this.Model as Portfolio).Images.First().Path)"></div>
+            <div class="shadow"></div>
+        }
+        <div class="text-wrapper">
+            <div class="title">
+                @if (this.Model is Blog)
+                {
+                    <p class="lead">@this.Model.Date.ToString("yyyy-MM-dd")</p>    
+                }
+                <p class="lead">@this.Model.Title</p>
+                @if (this.Model is Blog)
+                {
+                    <p>@this.Model.Abstract</p>
+                }
+            </div>
+        </div>
+    </div>
+</a>
+

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Portfolio>
+
+@{
+    ViewBag.Title = "James Dibble - Portfolio";
+    ViewBag.Description = "Examples of completed work; the portfolio of James Dibble.";
+}
+@section Script
+{
+    <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
+}
+
+@this.Html.Partial("PageTitle", "Portfolio")
+
+@foreach (var portfolio in this.Model)
+{
+    this.Html.RenderPartial("PostLink", portfolio);
+}

@@ -1,0 +1,25 @@
+﻿@model Personal.Website.ViewModels.BlogHeaderViewModel
+@{
+    ViewBag.Title = string.Concat("James Dibble - Blog", this.Model.GetDateString());
+    ViewBag.Description = string.Concat("Ramblings of a .Net Web Developer; the blog of James Dibble.", this.Model.GetDateString());
+}
+@section Script
+{
+    <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
+}
+@this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Year, month = this.Model.Month, canRemove = true })
+@this.Html.Partial("PageTitle", "Blog Archive")
+@foreach (var blog in this.Model.Blogs)
+{
+    this.Html.RenderPartial("PostLink", blog);
+}
+@if (!this.Model.Blogs.Any())
+{
+    <div class="col-lg-3 cold-md-4 col-sm-6 col-xs-12 square animate">
+        <div class="text-wrapper">
+            <div class="title">
+                <p class="lead">No Posts</p>
+            </div>
+        </div>
+    </div>
+}

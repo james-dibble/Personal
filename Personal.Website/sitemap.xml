@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.jdibble.co.uk/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/contact</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/portfolio</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/12/24/basic-search-engine-optimisation</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/12/16/lost-apple-keyboard-layout-on-windows-8.1</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/12/15/blogging</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/9/22/asp.net-content-delivery-network-part-deux</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/9/22/jquery-image-loader</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/portfolio/2013/9/21/stanley-c-baker-and-sons</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/portfolio/2013/9/11/arthur-kay</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/1/20/asp.net-content-delivery-network</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/11/14/pjax-with-asp.net-mvc-and-jquery-tutorial</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/portfolio/2012/11/5/students-for-happiness</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/portfolio/2012/10/9/meare-green-farm</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/portfolio/2012/9/20/danish-handcraft-guild</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/portfolio/2012/1/9/underwood-and-son-builders-ltd</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/1</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/3</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/4</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/5</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/6</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/7</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/8</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/9</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/10</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/11</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/12</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/1/12/microsoft-fakes</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/8/8/new-host</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/12</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/12</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/12</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/1</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/2</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/3</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/4</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/5</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/6</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/7</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/8</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/9</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/10</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2013/11</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/9</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/9</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/1</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/1</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/11</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/11</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/2</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/3</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/4</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/5</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/6</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/7</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/8</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2012/10</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/2</loc>
+  <changefreq>never</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/3</loc>
+  <changefreq>never</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/4</loc>
+  <changefreq>never</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/5</loc>
+  <changefreq>never</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/6</loc>
+  <changefreq>never</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/7</loc>
+  <changefreq>never</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/8</loc>
+  <changefreq>never</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jdibble.co.uk/blog/2011/10</loc>
+  <changefreq>never</changefreq>
+  <priority>0.51</priority>
+</url>
+</urlset>

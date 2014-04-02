@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@this.ViewBag.Title</title>
+    @this.Html.Partial("Head")
+    @this.RenderSection("Meta", false)
+    @this.Html.Partial("Style")
+    @this.RenderSection("Style", false)
+</head>
+<body>
+    @this.Html.Partial("Sidebar")
+    <div class="wrap" id="wrap">
+        <section class="container">
+            <div class="row" id="content">
+                @this.RenderBody()
+                @this.Html.Partial("LoadingSquare")
+            </div>
+        </section>
+    </div>
+    @this.Html.Partial("Footer")
+    @this.Html.Partial("Script")
+    @this.RenderSection("Script", false)
+</body>
+</html>
