@@ -129,7 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Bootstrapper.cs" />
-    <Compile Include="App_Start\CompressAttribute.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
@@ -167,7 +166,7 @@
       <DependentUpon>global.less</DependentUpon>
     </Content>
     <Content Include="Asset\Style\global.min.css">
-      <DependentUpon>global.less</DependentUpon>
+      <DependentUpon>global.css</DependentUpon>
     </Content>
     <Content Include="Asset\Style\summernote.css" />
     <Content Include="Asset\Style\variables.css">
@@ -242,9 +241,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Asset\Style\global.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Asset\Style\sidebar.less" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Sidebar.cshtml" />
