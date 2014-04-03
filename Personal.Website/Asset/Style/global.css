@@ -10,7 +10,7 @@
 }
 #wrap > .container-fluid {
   margin-top: -73px;
-  padding-top: 90px;
+  padding-top: 53px;
 }
 html {
   overflow-y: scroll;
@@ -18,6 +18,7 @@ html {
 html,
 body {
   height: 100%;
+  font-family: 'Arimo', sans-serif;
 }
 #wrap {
   min-height: 100%;
@@ -45,42 +46,55 @@ footer {
   padding: 20px;
   background: #dcdce2;
 }
-.summary:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em;
+.summary .summary-content-wrap {
+  display: table;
+  height: 195px;
+  width: 100%;
 }
-.summary .summary-content {
-  display: inline-block;
+.summary .summary-content-wrap .summary-content {
+  display: table-cell;
   vertical-align: middle;
 }
 .elipse {
-  text-align: center;
-  height: 150px;
-  width: 150px;
+  display: table;
+  height: 195px;
+  width: 195px;
+  border-radius: 1000px;
+  box-shadow: 1px 1px 25px #bbbbbb;
 }
 .elipse .img {
-  border-radius: 1000px;
+  display: table-cell;
   margin-bottom: 10px;
   height: 100%;
   width: 100%;
+  border-radius: 1000px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
 }
 .elipse .date {
-  display: inline-block;
+  display: table-cell;
   vertical-align: middle;
+  margin-bottom: 10px;
+  background: #007fff;
+  border-radius: 1000px;
+  height: 100%;
+  width: 100%;
 }
 .elipse .date h3 {
-  text-align: right;
+  color: #fafafa !important;
+  text-align: center;
 }
 .elipse .date h2 {
+  color: #fafafa !important;
   text-align: center;
 }
 .elipse .date h4 {
-  text-align: left;
+  color: #fafafa !important;
+  text-align: center;
 }
 @media (max-width: 1200px) {
   .summary {

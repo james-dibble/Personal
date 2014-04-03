@@ -16,14 +16,18 @@
                 <div class="elipse">
                     <div class="date">
                         <h4>@blog.Date.ToString("dddd")</h4>
-                        <h2>@blog.Date.ToString("MMM d")</h2>
+                        <h2>@blog.Date.ToString("MMMM d")</h2>
                         <h3>@blog.Date.Year</h3>
                     </div>
                 </div>
             </div>
             <div class="col-lg-8">
-                <p class="lead">@blog.Title</p>
-                <p>@blog.Abstract</p>
+                <div class="summary-content-wrap">
+                    <div class="summary-content">
+                        <p class="lead">@blog.Title</p>
+                        <p>@blog.Abstract</p>
+                    </div>
+                </div>
             </div>
         </div>
     }
@@ -34,14 +38,18 @@
                 <div class="elipse">
                     <div class="date">
                         <h4>@blog.Date.ToString("dddd")</h4>
-                        <h2>@blog.Date.ToString("MMM d")</h2>
+                        <h2>@blog.Date.ToString("MMMM d")</h2>
                         <h3>@blog.Date.Year</h3>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 text-right">
-                <p class="lead">@blog.Title</p>
-                <p>@blog.Abstract</p>
+            <div class="col-lg-8">
+                <div class="summary-content-wrap">
+                    <div class="summary-content text-right">
+                        <p class="lead">@blog.Title</p>
+                        <p>@blog.Abstract</p>
+                    </div>
+                </div>
             </div>
         </div>
     }

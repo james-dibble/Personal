@@ -8,6 +8,7 @@ html {
 html,
 body {
     height: 100%;
+    font-family: 'Arimo', sans-serif;
 }
 
 #wrap {
@@ -38,47 +39,63 @@ footer {
 
 .summary {
     padding: 20px;
-    background: @white;
+    background: @grey;
 
-    &:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-right: -0.25em;
-    }
+    .summary-content-wrap {
+        display: table;
+        height: 195px;
+        width: 100%;
 
-    .summary-content {
-        display: inline-block;
-        vertical-align: middle;
+        .summary-content{
+            display: table-cell;
+            vertical-align: middle;
+        }
     }
 }
 
 .elipse {
-    text-align: center;
-    height: 150px;
-    width: 150px;
+    display: table;
+    height: 195px;
+    width: 195px;
+    border-radius: 1000px;
+    box-shadow: 1px 1px 25px #bbbbbb;
 
     .img {
-        border-radius: 1000px;
+        display: table-cell;
         margin-bottom: 10px;
         height: 100%;
         width: 100%;
-        background-repeat:no-repeat;
-        background-position: center center;
+        border-radius: 1000px;
+        background-repeat: no-repeat;
+        background-position: center;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        -webkit-background-size: cover !important;
+        background-size: cover !important;
     }
 
-    .date{
-        display: inline-block;
+    .date {
+        display: table-cell;
         vertical-align: middle;
-        h3{
-            text-align: right;
-        }
-        h2{
+        margin-bottom: 10px;
+        background: @blue;
+        border-radius: 1000px;
+        height: 100%;
+        width: 100%;
+
+        h3 {
+            color: @white !important;
             text-align: center;
         }
-        h4{
-            text-align: left;
+
+        h2 {
+            color: @white !important;
+            text-align: center;
+        }
+
+        h4 {
+            color: @white !important;
+            text-align: center;
         }
     }
 }
