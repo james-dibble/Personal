@@ -1,32 +1,21 @@
 ﻿@import "variables.less";
-@import "sidebar.less";
+@import "navbar.less";
 
 html {
     overflow-y: scroll;
 }
 
-body, html, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Kreon', serif !important;
-    color: @white;
-}
-
 html,
 body {
     height: 100%;
-    background-image: url(../images/escheresque_ste.png);
 }
 
 #wrap {
-    position: relative;
     min-height: 100%;
     height: auto !important;
     height: 100%;
     margin: 0 auto -@footer-height;
-    padding: 0 0 @footer-height 50px;
-
-    > .container {
-        width: auto !important;
-    }
+    padding: 0 0 @footer-height;
 }
 
 footer {
@@ -34,7 +23,6 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
     height: @footer-height;
-    color: @white;
 }
 
 @media (min-width: @screen-desktop) {
@@ -44,137 +32,68 @@ footer {
 
     #wrap {
         margin: 0 auto -@footer-expand-height;
-        padding: 0 0 @footer-expand-height 50px;
+        padding: 0 0 @footer-expand-height;
     }
 }
 
-@import "variables.less";
+.summary {
+    padding: 20px;
+    background: @white;
 
-@squareHeight: 250px;
-
-.square {
-    height: @squareHeight;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    position: relative;
-    overflow: hidden;
-
-    h1 {
-        padding: 20px;
-        text-align: center;
-        color: @white;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
     }
 
-    .image, .shadow, .title {
+    .summary-content {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.elipse {
+    text-align: center;
+    height: 150px;
+    width: 150px;
+
+    .img {
+        border-radius: 1000px;
+        margin-bottom: 10px;
         height: 100%;
         width: 100%;
+        background-repeat:no-repeat;
+        background-position: center center;
     }
 
-    .shadow, .title {
-        position: absolute;
-        top: 0;
-        transition: opacity 0.5s;
-    }
-
-    .image {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .shadow {
-        background-color: #555;
-        opacity: 0.7;
-    }
-
-    .text-wrapper {
-        .text {
-            margin-top: @squareHeight;
-            transition: margin-top ease 0.2s;
-            text-decoration: none !important;
-            color: @white;
-            padding: 10px;
+    .date{
+        display: inline-block;
+        vertical-align: middle;
+        h3{
+            text-align: right;
         }
-
-        .title {
-            color: @white;
-            padding: 10px;
+        h2{
             text-align: center;
-            padding-top: 30px;
-            transition: margin-top ease 0.2s;
         }
-    }
-
-    &.rollover:hover {
-        .title {
-            margin-top: -@squareHeight;
-        }
-
-        .text {
-            margin-top: 0;
-            text-decoration: none !important;
-            text-align: center;
-
-            p {
-                padding: 10px;
-
-                .fa {
-                    color: @darkGreen;
-                }
-            }
+        h4{
+            text-align: left;
         }
     }
 }
 
-a {
-    .square {
-        &.portfolio:hover {
-            .shadow, .title {
-                opacity: 0;
-            }
-        }
+@media (max-width: @screen-desktop) {
+    .summary {
+        text-align: center !important;
 
-        &:not(.portfolio):hover {
-            background-color: @darkGreen;
+        .text-right {
+            text-align: center !important;
         }
     }
 
-    &:hover {
-        .text {
-            text-decoration: none !important;
-        }
-    }
-}
-
-.blog-header-year, .blog-header-month {
-    li {
-        display: table-cell;
-        width: 1%;
-
-        a {
-            color: @white;
-            background-color: @darkGreen;
-
-            &.active, &:hover {
-                background-color: lighten(@darkGreen, 10%) !important;
-            }
-        }
-    }
-}
-
-.nav-pills>li.active>a{
-    background-color: lighten(@darkGreen, 10%) !important;
-}
-
-.jumbotron{
-    h1, h2, p{
-        color: @darkGreen !important;
-    }
-
-    hr{
-        margin-top: 65px;
-        margin-bottom: 40px;
-        border-top: 1px solid @darkGreen;
-        height: 50px;
+    .elipse {
+        margin-bottom: 20px;
+        margin: auto auto 20px;
     }
 }

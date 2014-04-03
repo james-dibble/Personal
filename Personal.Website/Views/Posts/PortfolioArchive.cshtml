@@ -3,15 +3,40 @@
 @{
     ViewBag.Title = "James Dibble - Portfolio";
     ViewBag.Description = "Examples of completed work; the portfolio of James Dibble.";
-}
-@section Script
-{
-    <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
-}
 
-@this.Html.Partial("PageTitle", "Portfolio")
+    var count = 1;
+}
 
 @foreach (var portfolio in this.Model)
 {
-    this.Html.RenderPartial("PostLink", portfolio);
+    if (count % 2 != 0)
+    {
+        <div class="col-lg-8 summary">
+            <div class="col-lg-4">
+                <div class="elipse">
+                    <div class="img" style="background: url('@portfolio.Images.First().Path')"></div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <p class="lead">@portfolio.Title</p>
+                <p>@portfolio.Abstract</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="col-lg-8 col-lg-offset-4 summary">
+            <div class="col-lg-4">
+                <div class="elipse">
+                    <div class="img" style="background: url('@portfolio.Images.First().Path')"></div>
+                </div>
+            </div>
+            <div class="col-lg-8 text-right">
+                <p class="lead">@portfolio.Title</p>
+                <p>@portfolio.Abstract</p>
+            </div>
+        </div>
+    }
+
+    count++;
 }

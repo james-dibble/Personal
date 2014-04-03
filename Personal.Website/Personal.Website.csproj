@@ -168,6 +168,12 @@
     <Content Include="Asset\Style\global.min.css">
       <DependentUpon>global.css</DependentUpon>
     </Content>
+    <Content Include="Asset\Style\navbar.css">
+      <DependentUpon>navbar.less</DependentUpon>
+    </Content>
+    <Content Include="Asset\Style\navbar.min.css">
+      <DependentUpon>navbar.css</DependentUpon>
+    </Content>
     <Content Include="Asset\Style\summernote.css" />
     <Content Include="Asset\Style\variables.css">
       <DependentUpon>variables.less</DependentUpon>
@@ -243,9 +249,6 @@
     <Content Include="Asset\Style\global.less" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\Sidebar.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Asset\Script\global.min.js.map">
       <DependentUpon>global.js</DependentUpon>
     </Content>
@@ -281,6 +284,17 @@
     <Content Include="Views\Posts\WritePortfolio.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\NotFound.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Header.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Asset\Style\navbar.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Asset\Style\navbar.css.map">
+      <DependentUpon>navbar.css</DependentUpon>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

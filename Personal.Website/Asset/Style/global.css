@@ -1,70 +1,36 @@
-.sidebar {
-  position: fixed;
-  background-color: #751010;
-  top: 0;
-  bottom: 0;
-  min-width: 50px;
+.navbar .navbar-header {
+  float: left;
+  padding: 15px;
   text-align: center;
-  padding-top: 20px;
-  box-shadow: 2px 0px 5px rgba(50, 50, 50, 0.75);
-  z-index: 999;
+  width: 100%;
 }
-.sidebar .btn {
-  margin-left: 5px;
-  background-color: #a21616;
+.navbar .navbar-header .navbar-brand {
+  float: none;
+  text-transform: uppercase;
 }
-.sidebar .nav > li > a:hover,
-.sidebar .nav > li > a:focus,
-.sidebar .nav li.active a {
-  background-color: #a21616;
-}
-.sidebar .nav > li > a {
-  height: 35px;
-  color: #dcdce2 !important;
-}
-.sidebar .nav > li > a .text {
-  margin-top: -3px;
-  text-align: left;
-}
-#at4-share {
-  top: 228px;
+#wrap > .container-fluid {
+  margin-top: -73px;
+  padding-top: 90px;
 }
 html {
   overflow-y: scroll;
 }
-body,
-html,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Kreon', serif !important;
-  color: #dcdce2;
-}
 html,
 body {
   height: 100%;
-  background-image: url(../images/escheresque_ste.png);
 }
 #wrap {
-  position: relative;
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto -50px;
-  padding: 0 0 50px 50px;
-}
-#wrap > .container {
-  width: auto !important;
+  padding: 0 0 50px;
 }
 footer {
-  background-color: #751010;
+  background-color: transparent;
   padding-top: 10px;
   padding-bottom: 10px;
   height: 50px;
-  color: #dcdce2;
 }
 @media (min-width: 1200px) {
   footer {
@@ -72,108 +38,60 @@ footer {
   }
   #wrap {
     margin: 0 auto -50px;
-    padding: 0 0 50px 50px;
+    padding: 0 0 50px;
   }
 }
-.square {
-  height: 250px;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  position: relative;
-  overflow: hidden;
-}
-.square h1 {
+.summary {
   padding: 20px;
-  text-align: center;
-  color: #dcdce2;
+  background: #dcdce2;
 }
-.square .image,
-.square .shadow,
-.square .title {
+.summary:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+.summary .summary-content {
+  display: inline-block;
+  vertical-align: middle;
+}
+.elipse {
+  text-align: center;
+  height: 150px;
+  width: 150px;
+}
+.elipse .img {
+  border-radius: 1000px;
+  margin-bottom: 10px;
   height: 100%;
   width: 100%;
-}
-.square .shadow,
-.square .title {
-  position: absolute;
-  top: 0;
-  transition: opacity 0.5s;
-}
-.square .image {
-  background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
-.square .shadow {
-  background-color: #555;
-  opacity: 0.7;
+.elipse .date {
+  display: inline-block;
+  vertical-align: middle;
 }
-.square .text-wrapper .text {
-  margin-top: 250px;
-  transition: margin-top ease 0.2s;
-  text-decoration: none !important;
-  color: #dcdce2;
-  padding: 10px;
+.elipse .date h3 {
+  text-align: right;
 }
-.square .text-wrapper .title {
-  color: #dcdce2;
-  padding: 10px;
-  text-align: center;
-  padding-top: 30px;
-  transition: margin-top ease 0.2s;
-}
-.square.rollover:hover .title {
-  margin-top: -250px;
-}
-.square.rollover:hover .text {
-  margin-top: 0;
-  text-decoration: none !important;
+.elipse .date h2 {
   text-align: center;
 }
-.square.rollover:hover .text p {
-  padding: 10px;
+.elipse .date h4 {
+  text-align: left;
 }
-.square.rollover:hover .text p .fa {
-  color: #751010;
-}
-a .square.portfolio:hover .shadow,
-a .square.portfolio:hover .title {
-  opacity: 0;
-}
-a .square:not(.portfolio):hover {
-  background-color: #751010;
-}
-a:hover .text {
-  text-decoration: none !important;
-}
-.blog-header-year li,
-.blog-header-month li {
-  display: table-cell;
-  width: 1%;
-}
-.blog-header-year li a,
-.blog-header-month li a {
-  color: #dcdce2;
-  background-color: #751010;
-}
-.blog-header-year li a.active,
-.blog-header-month li a.active,
-.blog-header-year li a:hover,
-.blog-header-month li a:hover {
-  background-color: #a21616 !important;
-}
-.nav-pills > li.active > a {
-  background-color: #a21616 !important;
-}
-.jumbotron h1,
-.jumbotron h2,
-.jumbotron p {
-  color: #751010 !important;
-}
-.jumbotron hr {
-  margin-top: 65px;
-  margin-bottom: 40px;
-  border-top: 1px solid #751010;
-  height: 50px;
+@media (max-width: 1200px) {
+  .summary {
+    text-align: center !important;
+  }
+  .summary .text-right {
+    text-align: center !important;
+  }
+  .elipse {
+    margin-bottom: 20px;
+    margin: auto auto 20px;
+  }
 }
 /*# sourceMappingURL=global.css.map */

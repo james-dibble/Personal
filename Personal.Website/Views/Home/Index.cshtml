@@ -1,43 +1,4 @@
-﻿@model IEnumerable<Post>
-@{
+﻿@{
     ViewBag.Title = "James Dibble - .Net Web Developer";
-    ViewBag.Description = "James Dibble is a .Net web developer specialising in ASP.Net MVC.";
-}
-
-@section Script
-{
-    <script src="@this.Url.Content("~/asset/script/home.index.min.js")"></script>
-}
-
-<div class="jumbotron">
-    <div class="text-center">
-        <h1>James Dibble</h1>
-        <h2>.Net Web Developer</h2>
-        <hr />
-        <p class="lead">
-            A software developer by trade, I took up doing web design to earn a bit of dollor to get me through my degree.
-            I loved doing it so decided to make one for myself.  I come from a C# background so generally develop websites
-            using ASP.Net MVC.  I dabble in things such as HTML5, jQuery, AngularJS, LESS as well Java and PHP.
-        </p>
-        <p class="lead">
-            I'm always looking for new projects, so if you have one in mind that requires an internet pressence,
-            <a href="@this.Url.Action("contact", "home")">let me know</a>.  Take a look at some of the web designs
-            I have completed in my <a href="@this.Url.Action("portfolioarchive", "posts")">portfolio</a>.
-        </p>
-        <p class="lead">
-            My <a href="@this.Url.Action("blogarchive", "posts")">blog</a> contains some interesting posts on my nerdy travels
-            through the web design world.  Please feel free to leave any comments and questions.
-        </p>
-        <div class="btn-group">
-            <a class="btn btn-primary btn-lg" href="@this.Url.Action("portfolioarchive", "posts")">Portfolio</a>
-            <a class="btn btn-primary btn-lg" href="@this.Url.Action("blogarchive", "posts")">Blog</a>
-            <a class="btn btn-primary btn-lg" href="@this.Url.Action("contact", "home")">Contact Me</a>
-        </div>
-        <hr />
-    </div>
-</div>
-
-@foreach (var post in this.Model.Take(12))
-{
-    this.Html.RenderPartial("~/Views/Posts/PostLink.cshtml", post);
+    ViewBag.Description = "James Dibble is a .Net web developer specialised in creating responsive applications using ASP.Net MVC.";
 }

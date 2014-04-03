@@ -2,24 +2,53 @@
 @{
     ViewBag.Title = string.Concat("James Dibble - Blog", this.Model.GetDateString());
     ViewBag.Description = string.Concat("Ramblings of a .Net Web Developer; the blog of James Dibble.", this.Model.GetDateString());
+    var count = 1;
 }
-@section Script
-{
-    <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
-}
-@this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Year, month = this.Model.Month, canRemove = true })
-@this.Html.Partial("PageTitle", "Blog Archive")
+
+@*@this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Year, month = this.Model.Month, canRemove = true })*@
+@*@this.Html.Partial("PageTitle", "Blog Archive")*@
 @foreach (var blog in this.Model.Blogs)
 {
-    this.Html.RenderPartial("PostLink", blog);
+    if (count % 2 != 0)
+    {
+        <div class="col-lg-8 summary">
+            <div class="col-lg-4">
+                <div class="elipse">
+                    <div class="date">
+                        <h4>@blog.Date.ToString("dddd")</h4>
+                        <h2>@blog.Date.ToString("MMM d")</h2>
+                        <h3>@blog.Date.Year</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <p class="lead">@blog.Title</p>
+                <p>@blog.Abstract</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="col-lg-8 col-lg-offset-4 summary">
+            <div class="col-lg-4">
+                <div class="elipse">
+                    <div class="date">
+                        <h4>@blog.Date.ToString("dddd")</h4>
+                        <h2>@blog.Date.ToString("MMM d")</h2>
+                        <h3>@blog.Date.Year</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 text-right">
+                <p class="lead">@blog.Title</p>
+                <p>@blog.Abstract</p>
+            </div>
+        </div>
+    }
+
+    count++;
 }
 @if (!this.Model.Blogs.Any())
 {
-    <div class="col-lg-3 cold-md-4 col-sm-6 col-xs-12 square animate">
-        <div class="text-wrapper">
-            <div class="title">
-                <p class="lead">No Posts</p>
-            </div>
-        </div>
-    </div>
+    <p class="lead">No Posts</p>
 }
