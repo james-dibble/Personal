@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Portfolio>
+﻿@using System.Web.Services.Description
+@model IEnumerable<Portfolio>
 
 @{
     ViewBag.Title = "James Dibble - Portfolio";
@@ -11,17 +12,18 @@
 {
     if (count % 2 != 0)
     {
-        <div class="col-lg-8 summary">
-            <div class="col-lg-4">
+        <div class="col-lg-8 col-md-8 col-sm-8 summary">
+            <div class="col-lg-4 col-md-8 col-sm-8">
                 <div class="elipse">
                     <div class="img" style="background: url('@portfolio.Images.First().Path')"></div>
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-8 col-sm-8">
                 <div class="summary-content-wrap">
                     <div class="summary-content">
                         <p class="lead">@portfolio.Title</p>
                         <p>@portfolio.Abstract</p>
+                        @this.Html.Partial("PostLink", portfolio)
                     </div>
                 </div>
             </div>
@@ -29,17 +31,18 @@
     }
     else
     {
-        <div class="col-lg-8 col-lg-offset-4 summary">
-            <div class="col-lg-4">
+        <div class="col-lg-8 col-lg-offset-4 col-md-8 col-md-offset-4 col-sm-8 col-sm-offset-4 summary">
+            <div class="col-lg-4 col-md-8 col-sm-8">
                 <div class="elipse">
                     <div class="img" style="background: url('@portfolio.Images.First().Path')"></div>
                 </div>
             </div>
-            <div class="col-lg-8 text-right">
+            <div class="col-lg-8 col-md-8 col-sm-8">
                 <div class="summary-content-wrap">
                     <div class="summary-content text-right">
                         <p class="lead">@portfolio.Title</p>
                         <p>@portfolio.Abstract</p>
+                        @this.Html.Partial("PostLink", portfolio)
                     </div>
                 </div>
             </div>

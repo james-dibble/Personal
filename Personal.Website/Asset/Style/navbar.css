@@ -8,8 +8,10 @@
   float: none;
   text-transform: uppercase;
 }
+#wrap {
+  padding-top: 125px;
+}
 #wrap > .container-fluid {
   margin-top: -73px;
-  padding-top: 53px;
 }
 /*# sourceMappingURL=navbar.css.map */

@@ -1,17 +1,3 @@
-.navbar .navbar-header {
-  float: left;
-  padding: 15px;
-  text-align: center;
-  width: 100%;
-}
-.navbar .navbar-header .navbar-brand {
-  float: none;
-  text-transform: uppercase;
-}
-#wrap > .container-fluid {
-  margin-top: -73px;
-  padding-top: 53px;
-}
 html {
   overflow-y: scroll;
 }
@@ -41,6 +27,22 @@ footer {
     margin: 0 auto -50px;
     padding: 0 0 50px;
   }
+}
+.navbar .navbar-header {
+  float: left;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+.navbar .navbar-header .navbar-brand {
+  float: none;
+  text-transform: uppercase;
+}
+#wrap {
+  padding-top: 125px;
+}
+#wrap > .container-fluid {
+  margin-top: -73px;
 }
 .summary {
   padding: 20px;
