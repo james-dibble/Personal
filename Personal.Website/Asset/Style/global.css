@@ -5,6 +5,7 @@ html,
 body {
   height: 100%;
   font-family: 'Arimo', sans-serif;
+  background: #f7f7f7;
 }
 #wrap {
   min-height: 100%;
@@ -19,7 +20,7 @@ footer {
   padding-bottom: 10px;
   height: 50px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   footer {
     height: 50px;
   }
@@ -30,23 +31,57 @@ footer {
 }
 .navbar .navbar-header {
   float: left;
-  padding: 15px;
+  padding: 0;
   text-align: center;
   width: 100%;
 }
 .navbar .navbar-header .navbar-brand {
   float: none;
   text-transform: uppercase;
+  position: relative;
+  top: 9px;
+}
+#navbar-collapse {
+  display: none !important;
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #fafafa;
+  z-index: 1030;
+  box-shadow: 1px 1px 25px #bbbbbb;
+}
+#sidebar .btn {
+  position: relative;
+  margin-left: -40px;
+  border-radius: 0;
+  display: block !important;
+}
+#sidebar .collapse,
+#sidebar .collapsing {
+  width: auto !important;
+}
+#sidebar .collapse li,
+#sidebar .collapsing li {
+  margin-top: 0 !important;
+  width: 200px !important;
+}
+#sidebar .collapse li a,
+#sidebar .collapsing li a {
+  border-radius: 0 !important;
 }
 #wrap {
-  padding-top: 125px;
+  padding-top: 113px;
 }
 #wrap > .container-fluid {
   margin-top: -73px;
 }
 .summary {
   padding: 20px;
-  background: #dcdce2;
+  background: #fafafa;
+  box-shadow: 1px 1px 25px #bbbbbb;
 }
 .summary .summary-content-wrap {
   display: table;
@@ -101,6 +136,7 @@ footer {
 @media (max-width: 1200px) {
   .summary {
     text-align: center !important;
+    box-shadow: none;
   }
   .summary .text-right {
     text-align: center !important;

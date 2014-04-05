@@ -1,20 +1,57 @@
 ﻿.navbar {
     .navbar-header {
         float: left;
-        padding: 15px;
+        padding: 0;
         text-align: center;
         width: 100%;
 
         .navbar-brand {
             float: none;
             text-transform: uppercase;
+            position: relative;
+            top: 9px;
+        }
+    }
+}
+
+#navbar-collapse {
+    display: none !important;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: @white;
+    z-index: 1030;
+    box-shadow: 1px 1px 25px #bbbbbb;
+
+    .btn{
+        position: relative;
+        margin-left: -40px;
+        border-radius: 0;
+        display: block !important;
+    }
+
+    .collapse, .collapsing{
+        width: auto !important;
+
+        li{
+            margin-top: 0 !important;
+            width: 200px !important;
+
+            a{
+                border-radius: 0 !important;
+            }
         }
     }
 }
 
 #wrap {
-    padding-top: 125px;
-    > .container-fluid{
+    padding-top: 113px;
+
+    > .container-fluid {
         margin-top: -73px;
     }
 }

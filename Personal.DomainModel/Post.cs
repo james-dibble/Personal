@@ -13,5 +13,7 @@
         public string Abstract { get; set; }
 
         public string Content { get; set; }
+
+        public string Tags { get; set; }
     }
 }

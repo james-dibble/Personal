@@ -8,6 +8,7 @@ html,
 body {
     height: 100%;
     font-family: 'Arimo', sans-serif;
+    background: @grey;
 }
 
 #wrap {
@@ -25,7 +26,7 @@ footer {
     height: @footer-height;
 }
 
-@media (min-width: @screen-desktop) {
+@media (min-width: @screen-tablet) {
     footer {
         height: @footer-expand-height;
     }
@@ -40,7 +41,8 @@ footer {
 
 .summary {
     padding: 20px;
-    background: @grey;
+    background: @white;
+    box-shadow: 1px 1px 25px #bbbbbb;
 
     .summary-content-wrap {
         display: table;
@@ -104,6 +106,7 @@ footer {
 @media (max-width: @screen-desktop) {
     .summary {
         text-align: center !important;
+        box-shadow: none;
 
         .text-right {
             text-align: center !important;
