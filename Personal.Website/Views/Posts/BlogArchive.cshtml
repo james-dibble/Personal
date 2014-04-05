@@ -26,7 +26,11 @@
                     <div class="summary-content">
                         <p class="lead">@blog.Title</p>
                         <p>@blog.Abstract</p>
-                        @this.Html.Partial("PostLink", blog)
+                        @this.Html.Partial("PostLink", blog)&nbsp;
+                        @foreach (var tag in blog.Tags == null ? new string[0] : blog.Tags.Split(','))
+                        {
+                            <span class="label label-primary">@tag</span>
+                        }
                     </div>
                 </div>
             </div>
@@ -50,6 +54,10 @@
                         <p class="lead">@blog.Title</p>
                         <p>@blog.Abstract</p>
                         @this.Html.Partial("PostLink", blog)
+                        @foreach (var tag in blog.Tags == null ? new string[0] : blog.Tags.Split(','))
+                        {
+                            <span class="label label-primary">@tag</span>
+                        }
                     </div>
                 </div>
             </div>

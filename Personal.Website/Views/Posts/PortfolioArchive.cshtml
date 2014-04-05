@@ -24,6 +24,10 @@
                         <p class="lead">@portfolio.Title</p>
                         <p>@portfolio.Abstract</p>
                         @this.Html.Partial("PostLink", portfolio)
+                        @foreach (var tag in portfolio.Tags == null ? new string[0] : portfolio.Tags.Split(','))
+                        {
+                            <span class="label label-primary">@tag</span>
+                        }
                     </div>
                 </div>
             </div>
@@ -43,6 +47,10 @@
                         <p class="lead">@portfolio.Title</p>
                         <p>@portfolio.Abstract</p>
                         @this.Html.Partial("PostLink", portfolio)
+                        @foreach (var tag in portfolio.Tags == null ? new string[0] : portfolio.Tags.Split(','))
+                        {
+                            <span class="label label-primary">@tag</span>
+                        }
                     </div>
                 </div>
             </div>

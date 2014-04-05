@@ -25,6 +25,14 @@
         <p class="lead">@this.Model.Abstract</p>
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p>
+            @foreach (var tag in this.Model.Tags == null ? new string[0] : this.Model.Tags.Split(','))
+            {
+                <span class="label label-primary">@tag</span>
+            }
+        </p>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         @this.Html.Raw(this.Model.Content)
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
