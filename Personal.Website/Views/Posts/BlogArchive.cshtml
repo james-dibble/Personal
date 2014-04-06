@@ -5,8 +5,6 @@
     var count = 1;
 }
 
-@*@this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Year, month = this.Model.Month, canRemove = true })*@
-@*@this.Html.Partial("PageTitle", "Blog Archive")*@
 @foreach (var blog in this.Model.Blogs)
 {
     if (count % 2 != 0)

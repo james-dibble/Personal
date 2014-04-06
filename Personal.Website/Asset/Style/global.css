@@ -133,6 +133,10 @@ footer {
   color: #fafafa !important;
   text-align: center;
 }
+.jumbotron h2 {
+  font-size: 63px;
+  color: inherit;
+}
 @media (max-width: 1200px) {
   .summary {
     text-align: center !important;
