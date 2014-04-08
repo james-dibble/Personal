@@ -150,6 +150,7 @@ footer {
   min-height: 100vh;
   display: table;
   width: 100%;
+  padding-top: 0;
 }
 .jumbotron .container-fluid {
   display: table-cell;
@@ -233,6 +234,7 @@ footer {
 @media (max-width: 480px) {
   .jumbotron {
     display: block;
+    padding-top: 40px;
   }
   .jumbotron h1 {
     font-size: 50px;
