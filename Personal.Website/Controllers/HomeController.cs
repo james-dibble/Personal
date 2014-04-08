@@ -19,9 +19,7 @@ namespace Personal.Website.Controllers
 
         public ActionResult Index()
         {
-            var posts = this._postService.GetAllPosts();
-            
-            return this.View(posts);
+            return this.View();
         }
 
         public ActionResult Contact()

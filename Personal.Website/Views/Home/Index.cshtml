@@ -5,10 +5,21 @@
 
 <div class="jumbotron">
     <div class="container-fluid">
-        <h1>Hello, I'm James Dibble</h1>
+        <div class="col-lg-12">
+            <h1>
+                Hello, I'm James Dibble
+            </h1>
+            <div class="elipse">
+
+            </div>
+        </div>
+    </div>
+    <div class="scroll-arrow" data-scroll-to="#websites">
+        <i class="fa fa-angle-down"></i>
+        <i class="fa fa-angle-down"></i>
     </div>
 </div>
-<div class="jumbotron primary">
+<div class="jumbotron primary" id="websites">
     <div class="container-fluid">
         <div class="col-lg-3">
             <div class="elipse">
@@ -21,8 +32,12 @@
             <a href="@this.Url.Action("portfolioarchive", "posts")" class="btn btn-primary">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
     </div>
+    <div class="scroll-arrow" data-scroll-to="#apps">
+        <i class="fa fa-angle-down"></i>
+        <i class="fa fa-angle-down"></i>
+    </div>
 </div>
-<div class="jumbotron default">
+<div class="jumbotron" id="apps">
     <div class="container-fluid">
         <div class="col-lg-3">
             <div class="elipse">
@@ -38,8 +53,12 @@
             <a href="@this.Url.Action("portfolioarchive", "posts")" class="btn btn-primary">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
     </div>
+    <div class="scroll-arrow" data-scroll-to="#blogging">
+        <i class="fa fa-angle-down"></i>
+        <i class="fa fa-angle-down"></i>
+    </div>
 </div>
-<div class="jumbotron primary">
+<div class="jumbotron primary" id="blogging">
     <div class="container-fluid">
         <div class="col-lg-3">
             <div class="elipse">
@@ -52,12 +71,16 @@
             <a href="@this.Url.Action("blogarchive", "posts")" class="btn btn-primary">Blog&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
     </div>
+    <div class="scroll-arrow" data-scroll-to="#social">
+        <i class="fa fa-angle-down"></i>
+        <i class="fa fa-angle-down"></i>
+    </div>
 </div>
-<div class="jumbotron default">
+<div class="jumbotron" id="social">
     <div class="container-fluid">
         <div class="col-lg-3">
             <div class="elipse">
-                <p></p>
+                <p><p><i class="fa fa-users fa-4"></i></p></p>
             </div>
         </div>
         <div class="col-lg-9">
@@ -65,3 +88,17 @@
         </div>
     </div>
 </div>
+
+@section Script
+{
+    <script src="http://asset.jdibble.co.uk/script/jquery-scrollto.js"></script>
+    <script>
+        $(function () {
+            $('[data-scroll-to]').click(function () {
+                $($(this).data('scroll-to')).ScrollTo({
+                    duration: 800
+                });
+            });
+        });
+    </script>
+}
