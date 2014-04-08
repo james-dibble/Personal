@@ -150,12 +150,11 @@ footer {
   min-height: 100vh;
   display: table;
   width: 100%;
-  margin-top: -40px;
 }
 .jumbotron .container-fluid {
   display: table-cell;
   vertical-align: middle;
-  width: 100%;
+  padding-top: 60px;
 }
 .jumbotron .scroll-arrow {
   height: 40px;
@@ -166,7 +165,7 @@ footer {
   text-align: center;
   font-size: 30px;
   position: absolute;
-  bottom: 120px;
+  bottom: 160px;
   right: 20px;
   cursor: pointer;
   box-shadow: 0 0 10px 3px #bbb;
@@ -183,7 +182,7 @@ footer {
   top: -30px;
 }
 .jumbotron .scroll-arrow i:last-child {
-  top: -40px;
+  top: -42px;
 }
 .jumbotron .scroll-arrow:hover i:first-child {
   top: 0;
@@ -229,6 +228,20 @@ footer {
   .elipse {
     margin-bottom: 20px;
     margin: auto auto 20px;
+  }
+}
+@media (max-width: 480px) {
+  .jumbotron {
+    display: block;
+  }
+  .jumbotron h1 {
+    font-size: 50px;
+  }
+  .jumbotron h2 {
+    font-size: 40px;
+  }
+  .jumbotron .container-fluid {
+    display: block;
   }
 }
 /*# sourceMappingURL=global.css.map */

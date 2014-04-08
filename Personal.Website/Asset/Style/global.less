@@ -121,12 +121,11 @@ footer {
     min-height: 100vh;
     display: table;
     width: 100%;
-    margin-top: -40px;
 
     .container-fluid {
         display: table-cell;
         vertical-align: middle;
-        width: 100%;
+        padding-top: 60px;
     }
 
     .scroll-arrow {
@@ -138,7 +137,7 @@ footer {
         text-align: center;
         font-size: 30px;
         position: absolute;
-        bottom: 120px;
+        bottom: 160px;
         right: 20px;
         cursor: pointer;
         box-shadow: 0 0 10px 3px #bbb;
@@ -154,8 +153,9 @@ footer {
             &:first-child {
                 top: -30px;
             }
+
             &:last-child {
-                top: -40px;
+                top: -42px;
             }
         }
 
@@ -163,6 +163,7 @@ footer {
             i:first-child {
                 top: 0;
             }
+
             i:last-child {
                 top: 30px;
             }
@@ -216,5 +217,23 @@ footer {
     .elipse {
         margin-bottom: 20px;
         margin: auto auto 20px;
+    }
+}
+
+@media (max-width: @screen-phone) {
+    .jumbotron {
+        display: block;
+
+        h1{
+            font-size: 50px;
+        }
+
+        h2{
+            font-size: 40px;
+        }
+
+        .container-fluid {
+            display: block;
+        }
     }
 }
