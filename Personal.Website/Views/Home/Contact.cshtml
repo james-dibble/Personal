@@ -5,64 +5,40 @@
 }
 @this.Html.Partial("PageTitle", "Contact Me")
 <div class="container">
-    <div class="row">&nbsp;</div>
     <div class="row">
-        <div class="col-lg-6 col-md-6 animate">
+        <div class="col-lg-6 col-md-6">
             @this.Html.Partial("ContactForm")
         </div>
         <div class="col-lg-6 col-md-6">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 square animate rollover">
-                <a href="https://twitter.com/dibble_james" target="_blank">
-                    <div class="text-wrapper">
-                        <div class="title">
-                            <p class="lead"><span class="fa fa-twitter fa-4x"></span></p>
-                        </div>
-                        <div class="text">
-                            <p class="lead"><span class="fa fa-twitter fa-4x"></span></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 square animate rollover">
-                <a href="https://plus.google.com/104250015987511319684/posts" target="_blank">
-                    <div class="text-wrapper">
-                        <div class="title">
-                            <p class="lead"><span class="fa fa-google-plus fa-4x"></span></p>
-                        </div>
-                        <div class="text">
-                            <p class="lead"><span class="fa fa-google-plus fa-4x"></span></p>
-                        </div>
-                    </div>
-                </a>
-            </div><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 square animate rollover">
-                <a href="http://www.linkedin.com/in/dibblejames" target="_blank">
-                    <div class="text-wrapper">
-                        <div class="title">
-                            <p class="lead"><span class="fa fa-linkedin fa-4x"></span></p>
-                        </div>
-                        <div class="text">
-                            <p class="lead"><span class="fa fa-linkedin fa-4x"></span></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 square animate rollover">
-                <a href="https://github.com/james-dibble/" target="_blank">
-                    <div class="text-wrapper">
-                        <div class="title">
-                            <p class="lead"><span class="fa fa-github fa-4x"></span></p>
-                        </div>
-                        <div class="text">
-                            <p class="lead"><span class="fa fa-github fa-4x"></span></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            
         </div>
     </div>
 </div>
 @section Script
 {
     <script type="text/javascript" src="//asset.jdibble.co.uk/script/form.min.js"></script>
-    <script type="text/javascript" src="@this.Url.Content("~/asset/script/home.contact.min.js")"></script>
+    <script>
+        var OnSend = function () {
+            $('button[type="submit"]').button('sending');
+            $('.alert-danger').hide();
+            $('.alert-success').hide();
+            $('fieldset').attr('disabled', 'disabled');
+        };
+
+        var OnComplete = function() {
+            $('button[type="submit"]').button('reset');
+            $('fieldset').removeAttr('disabled');
+        };
+
+        var OnFailure = function () {
+            $('.alert-danger').removeClass('hidden');
+            $('.alert-danger').fadeIn();
+        };
+
+        var OnSent = function () {
+            $('.alert-success').removeClass('hidden');
+            $('.alert-success').fadeIn();
+            $('input[type="text"], input[type="email"], textarea').val('');
+        };
+    </script>
 }
