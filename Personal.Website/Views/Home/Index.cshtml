@@ -62,7 +62,7 @@
     <div class="container-fluid">
         <div class="col-lg-3">
             <div class="elipse">
-                <p><i class="fa fa-comments-o fa-4"></i></p>
+                <p><i class="fa fa-comments-o fa-2x"></i></p>
             </div>
         </div>
         <div class="col-lg-9">
@@ -80,11 +80,15 @@
     <div class="container-fluid">
         <div class="col-lg-3">
             <div class="elipse">
-                <p><p><i class="fa fa-users fa-4"></i></p></p>
+                <p><i class="fa fa-users fa-2x"></i></p>
             </div>
         </div>
         <div class="col-lg-9">
             <h2>I does social</h2>
+            <a href="https://twitter.com/dibble_james" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+            <a href="https://plus.google.com/104250015987511319684/posts" target="_blank"><span class="fa fa-google-plus fa-3x"></span></a>
+            <a href="http://www.linkedin.com/in/dibblejames" target="_blank"><span class="fa fa-linkedin fa-3x"></span></a>
+            <a href="https://github.com/james-dibble/" target="_blank"><span class="fa fa-github fa-3x"></span></a>
         </div>
     </div>
 </div>
@@ -108,16 +112,24 @@
                 });
 
                 scrollorama
-                    .animate('#hello h1', { duration: $('#hello').height(), property: 'top', end: '+500px' })
-                    .animate('#hello .elipse', { duration: $('#hello').height() - 70, property: 'top', end: '-300px' })
+                    .animate('#hello h1',           { duration: $('#hello').height(), property: 'top', end: '+500px' })
+                    .animate('#hello .elipse',      { duration: $('#hello').height() - 70, property: 'top', end: '+300px' })
                     .animate('#websites .col-lg-9', { duration: $('#websites').height() - 70, property: 'right', start: '-1500px' })
-                    .animate('#websites .elipse', { duration: $('#hello').height() - 70, property: 'left', start: '-1500px' })
-                    .animate('#apps .col-lg-9', { duration: $('#apps').height() - 70, property: 'right', start: '-1500px' })
-                    .animate('#apps .elipse', { duration: $('#apps').height() - 70, property: 'left', start: '-1500px' })
+                    .animate('#websites .elipse',   { duration: $('#websites').height() - 70, property: 'left', start: '-1500px' })
+                    .animate('#apps .col-lg-9',     { duration: $('#apps').height() - 70, property: 'right', start: '-1500px' })
+                    .animate('#apps .elipse',       { duration: $('#apps').height() - 70, property: 'left', start: '-1500px' })
                     .animate('#blogging .col-lg-9', { duration: $('#blogging').height() - 70, property: 'right', start: '-1500px' })
-                    .animate('#blogging .elipse', { duration: $('#blogging').height() - 70, property: 'left', start: '-1500px' })
-                    .animate('#social .col-lg-9', { duration: $('#social').height() - 70, property: 'right', start: '-1500px' })
-                    .animate('#social .elipse', { duration: $('#social').height() - 70, property: 'left', start: '-1500px' });
+                    .animate('#blogging .elipse',   { duration: $('#blogging').height() - 70, property: 'left', start: '-1500px' })
+                    .animate('#social .col-lg-9',   { duration: $('#social').height() - 70, property: 'right', start: '-1500px' })
+                    .animate('#social .elipse',     { duration: $('#social').height() - 70, property: 'left', start: '-1500px' })
+
+                    .animate('#websites .col-lg-9', { duration: $('#websites').height() -70, delay: $('#websites').height() + 180, property: 'top', end: '+400px' })
+                    .animate('#websites .elipse', { duration: $('#websites').height() - 70, delay: $('#websites').height() + 180, property: 'top', end: '+500px' })
+                    .animate('#apps .col-lg-9', { duration: $('#apps').height() - 70, delay: $('#apps').height() + 180, property: 'top', end: '+400px' })
+                    .animate('#apps .elipse', { duration: $('#apps').height() - 70, delay: $('#apps').height() + 180, property: 'top', end: '+500px' })
+                    .animate('#blogging .col-lg-9', { duration: $('#blogging').height() - 70, delay: $('#blogging').height() + 180, property: 'top', end: '+400px' })
+                    .animate('#blogging .elipse', { duration: $('#blogging').height() - 70, delay: $('#blogging').height() + 180, property: 'top', end: '+500px' })
+                ;
             };
 
             $(window).resize(initScrollorama);
