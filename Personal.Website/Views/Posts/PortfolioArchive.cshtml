@@ -25,14 +25,7 @@
                         <p>@portfolio.Abstract</p>
                         @this.Html.Partial("PostLink", portfolio)
                         <span class="fa fa-tag"></span>
-                        @if (portfolio.Tags == null)
-                        {
-                            <span>No Tags</span>
-                        }
-                        @foreach (var tag in portfolio.Tags == null ? new string[0] : portfolio.Tags.Split(','))
-                        {
-                            <span class="label label-primary">@tag</span>
-                        }
+                        @this.Html.Partial("TagLinks", portfolio)
                     </div>
                 </div>
             </div>
@@ -51,14 +44,7 @@
                     <div class="summary-content text-right">
                         <p class="lead">@portfolio.Title</p>
                         <p>@portfolio.Abstract</p>
-                        @if (portfolio.Tags == null)
-                        {
-                            <span>No Tags</span>
-                        }
-                        @foreach (var tag in portfolio.Tags == null ? new string[0] : portfolio.Tags.Split(','))
-                        {
-                            <span class="label label-primary">@tag</span>
-                        }
+                        @this.Html.Partial("TagLinks", portfolio)
                         <span class="fa fa-tag"></span>
                         &nbsp;
                         @this.Html.Partial("PostLink", portfolio)

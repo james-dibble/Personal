@@ -41,14 +41,7 @@
                             <p>@blog.Abstract</p>
                             @this.Html.Partial("PostLink", blog)&nbsp;
                             <span class="fa fa-tag"></span>
-                            @if (blog.Tags == null)
-                            {
-                                <span>No Tags</span>
-                            }
-                            @foreach (var tag in blog.Tags == null ? new string[0] : blog.Tags.Split(','))
-                            {
-                                <span class="label label-primary">@tag</span>
-                            }
+                            @this.Html.Partial("TagLinks", blog)
                         </div>
                     </div>
                 </div>
@@ -71,14 +64,7 @@
                         <div class="summary-content text-right">
                             <p class="lead">@blog.Title</p>
                             <p>@blog.Abstract</p>
-                            @if (blog.Tags == null)
-                            {
-                                <span>No Tags</span>
-                            }
-                            @foreach (var tag in blog.Tags == null ? new string[0] : blog.Tags.Split(','))
-                            {
-                                <span class="label label-primary">@tag</span>
-                            }
+                            @this.Html.Partial("TagLinks", blog)
                             <span class="fa fa-tag"></span>
                             &nbsp;
                             @this.Html.Partial("PostLink", blog)

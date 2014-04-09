@@ -116,12 +116,12 @@ footer .scroll-arrow:hover i:last-child {
   margin-top: -73px;
 }
 @media (min-width: 768px) {
-  [data-spy="affix"] {
+  .affix[data-spy="affix"] {
     width: 25%;
   }
 }
 @media (min-width: 1200px) {
-  [data-spy="affix"] {
+  .affix[data-spy="affix"] {
     width: 13.66666667%;
   }
 }

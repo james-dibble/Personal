@@ -71,6 +71,15 @@
             return this.View(viewModel);
         }
 
+        public ActionResult BlogArchiveTag(int year, int month, string tag)
+        {
+            var blogs = this._postService.GetBlogs(tag).OrderByDescending(p => p.Date);
+
+            var viewModel = new BlogHeaderViewModel { Year = year, Month = month, Blogs = blogs };
+
+            return this.View("BlogArchive", viewModel);
+        }
+
         public ActionResult BlogHeader(int year = 0, int month = 0, bool canRemove = true)
         {
             var blogs = this._postService.GetAllBlogs();
@@ -114,9 +123,16 @@
 
         public ActionResult PortfolioArchive()
         {
-            var portfolios = this._postService.GetAllPortfolios().OrderByDescending(p => p.Date); ;
+            var portfolios = this._postService.GetAllPortfolios().OrderByDescending(p => p.Date);
 
             return this.View(portfolios);
+        }
+
+        public ActionResult PortfolioArchiveTag(string tag)
+        {
+            var portfolios = this._postService.GetPortfolios(tag).OrderByDescending(p => p.Date);
+
+            return this.View("PortfolioArchive", portfolios);
         }
 
         public ActionResult Portfolio(int year, int month, int day, string title)

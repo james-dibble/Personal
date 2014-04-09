@@ -302,6 +302,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\SmarterAsp - Test.pubxml" />
+    <Content Include="Views\Posts\TagLinks.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
