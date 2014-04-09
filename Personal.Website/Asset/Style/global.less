@@ -21,9 +21,50 @@ body {
 
 footer {
     background-color: @footer-bg;
-    padding-top: 10px;
+    padding-top: 16px;
     padding-bottom: 10px;
     height: @footer-height;
+
+    .scroll-arrow {
+        height: 32px;
+        width: 32px;
+        border-radius: 1000px;
+        background: @red;
+        color: @white;
+        text-align: center;
+        font-size: 25px;
+        cursor: pointer;
+        box-shadow: 0 0 10px 3px #bbb;
+        overflow: hidden;
+        margin-top: -5px;
+        margin-left: 10px;
+
+        i {
+            position: relative;
+            -moz-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -webkit-transition: all ease 0.3s;
+            transition: all ease 0.3s;
+
+            &:first-child {
+                top: -3px;
+            }
+
+            &:last-child {
+                top: 38px;
+            }
+        }
+
+        &:hover {
+            i:first-child {
+                top: -38px;
+            }
+
+            i:last-child {
+                top: -38px;
+            }
+        }
+    }
 }
 
 @media (min-width: @screen-tablet) {

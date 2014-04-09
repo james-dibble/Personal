@@ -101,16 +101,9 @@
 
 @section Script
 {
-    <script src="http://asset.jdibble.co.uk/script/jquery-scrollto.js"></script>
     <script src="http://asset.jdibble.co.uk/script/jquery.scrollorama.js"></script>
     <script>
         $(function () {
-            $('[data-scroll-to]').click(function () {
-                $($(this).data('scroll-to')).ScrollTo({
-                    duration: 800,
-                });
-            });
-
             var initScrollorama = function () {
                 if (window.innerWidth <= 480) {
                     return;
