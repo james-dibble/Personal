@@ -181,7 +181,11 @@
     <Content Include="Asset\Style\variables.min.css">
       <DependentUpon>variables.less</DependentUpon>
     </Content>
+    <Content Include="BingSiteAuth.xml" />
     <Content Include="Global.asax" />
+    <Content Include="googled89da873de4b424d.html" />
+    <Content Include="robots.txt" />
+    <Content Include="sitemap.xml" />
     <Content Include="Unity.Mvc4.README.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
