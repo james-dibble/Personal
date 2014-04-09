@@ -11,7 +11,7 @@
 {
     <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
 }
-<div class="col-lg-2 col-md-2 col-sm-3">
+<div class="col-lg-2 col-md-2 col-sm-3 affix-container">
     @this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Date.Year, month = this.Model.Date.Month, canRemove = false })
 </div>
 <div class="col-lg-10 col-md-10 col-sm-9">

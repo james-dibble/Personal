@@ -80,6 +80,18 @@ footer {
 
 @import "navbar.less";
 
+@media (min-width: 768px){
+    [data-spy="affix"]{
+        width: 25%;
+    }
+}
+
+@media (min-width: @screen-desktop){
+    [data-spy="affix"]{
+        width: 13.66666667%;
+    }
+}
+
 .btn {
     &.btn-default {
         background-image: linear-gradient(@white, @pureWhite 6%);
@@ -246,7 +258,7 @@ footer {
         a {
             color: @white;
 
-            &.btn{
+            &.btn {
                 color: @red;
             }
 
@@ -254,7 +266,7 @@ footer {
                 color: darken(@red, 20%);
 
                 i {
-                    color: darken(@red, 20%);   
+                    color: darken(@red, 20%);
                 }
             }
 

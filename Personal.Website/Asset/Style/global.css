@@ -115,6 +115,16 @@ footer .scroll-arrow:hover i:last-child {
 #wrap > .container-fluid {
   margin-top: -73px;
 }
+@media (min-width: 768px) {
+  [data-spy="affix"] {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  [data-spy="affix"] {
+    width: 13.66666667%;
+  }
+}
 .btn.btn-default {
   background-image: linear-gradient(#fafafa, #ffffff 6%);
   border: 1px solid #f7f7f7;
