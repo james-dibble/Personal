@@ -151,6 +151,7 @@ footer {
   display: table;
   width: 100%;
   padding-top: 0;
+  overflow: hidden;
 }
 .jumbotron .container-fluid {
   display: table-cell;
@@ -196,6 +197,7 @@ footer {
   text-align: center;
   color: #d9230f;
   font-size: 70px;
+  z-index: 999;
 }
 .jumbotron h2 {
   font-size: 63px;
