@@ -17,6 +17,11 @@
         $(['.blog-header-month li a[data-month="', month, '"]'].join('')).parent().addClass("active");
     }
     
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+
     //$.getJSON('/posts/wordcloud', function(data) {
     //    $("#wordcloud").jQCloud(data, {
     //        width: $("#wordcloud").parent().width(),

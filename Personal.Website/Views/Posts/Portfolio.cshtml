@@ -3,16 +3,25 @@
     ViewBag.Title = string.Join(" - ", "James Dibble", "Portfolio", this.Model.Title);
     ViewBag.Description = this.Model.Abstract;
 }
+
+@section Style
+{
+    <link rel="stylesheet" href="http://rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.css" />
+}
+
 @section Script
 {
-    <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
+    <script src="http://rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
+    <script src="@this.Url.Content("~/asset/script/post.js")"></script>
 }
 <div class="col-lg-2 col-md-2 col-sm-3">
     @foreach (var image in this.Model.Images)
     {
-        <div class="elipse">
-            <div class="img" style="background: url('@image.Path')"></div>
-        </div>
+        <a href="@image.Path" data-toggle="lightbox" data-gallery="multiimages" data-title="@this.Model.Title">
+            <div class="elipse">
+                <div class="img" style="background: url('@image.Path')"></div>
+            </div>
+        </a>
         <br />
     }
 </div>
