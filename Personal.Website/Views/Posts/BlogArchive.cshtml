@@ -5,9 +5,15 @@
     var count = 1;
 }
 
+@section Style
+{
+    <link rel="stylesheet" href="http://www.lucaongaro.eu/demos/jqcloud/jqcloud.css" />
+}
+
 @section Script
 {
-    <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
+    <script src="http://www.lucaongaro.eu/demos/jqcloud/jqcloud-1.0.0.min.js"></script>
+    <script src="@this.Url.Content("~/asset/script/post.js")"></script>
 }
 
 <div class="col-lg-2 col-md-3 col-sm-3">

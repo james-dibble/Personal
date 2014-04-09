@@ -16,6 +16,13 @@
 
         $(['.blog-header-month li a[data-month="', month, '"]'].join('')).parent().addClass("active");
     }
+    
+    //$.getJSON('/posts/wordcloud', function(data) {
+    //    $("#wordcloud").jQCloud(data, {
+    //        width: $("#wordcloud").parent().width(),
+    //        height: $("#wordcloud").parent().width()
+    //    });
+    //});
 });
 
 (function () {

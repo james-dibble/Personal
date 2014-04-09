@@ -32,5 +32,7 @@ namespace Personal.ServiceLayer
         void SavePortfolioImages(Portfolio portfolio, ICollection<Image> images);
 
         IEnumerable<Portfolio> GetAllPortfolios();
+
+        IEnumerable<string> GetAllTags();
     }
 }

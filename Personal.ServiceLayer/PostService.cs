@@ -164,5 +164,14 @@
 
             return portfolios;
         }
+
+        public IEnumerable<string> GetAllTags()
+        {
+            var blogsWithTags = this._persistence.GetRepository<Blog>().GetMany(b => b.Tags != null);
+
+            var tags = blogsWithTags.SelectMany(b => b.Tags.Split(','));
+
+            return tags;
+        }
     }
 }

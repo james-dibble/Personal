@@ -159,5 +159,14 @@
 
             return this.RedirectToAction("WritePortfolio", "Posts", new { id = savedPortfolio.Id });
         }
+
+        public ActionResult WordCloud()
+        {
+            var tags = this._postService.GetAllTags().ToList();
+
+            var cloud = tags.Distinct().Select(tag => new { text = tag, weight = tags.Count(t => t == tag) });
+
+            return this.Json(cloud, JsonRequestBehavior.AllowGet);
+        }
     }
 }
