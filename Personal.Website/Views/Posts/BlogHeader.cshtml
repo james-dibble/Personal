@@ -1,6 +1,5 @@
 ﻿@model Personal.Website.ViewModels.BlogHeaderViewModel
-
-<ul class="nav nav-pills nav-justified blog-header-year">
+<ul class="nav nav-pills blog-header-year">
     @foreach (var year in this.Model.Blogs.Select(b => b.Date.Year).Distinct().OrderBy(year => year))
     {
         if (this.Model.Year == year && this.Model.CanRemove)
@@ -13,29 +12,14 @@
         }
     }
 </ul>
-<ul class="nav nav-pills nav-justified blog-header-month visible-lg visible-md">
+<br />
+<ul class="nav nav-pills blog-header-month">
     <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 1 ? 0 : 1 })" data-month="1">Jan</a></li>
     <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 2 ? 0 : 2 })" data-month="2">Feb</a></li>
     <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 3 ? 0 : 3 })" data-month="3">Mar</a></li>
     <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 4 ? 0 : 4 })" data-month="4">Apr</a></li>
     <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 5 ? 0 : 5 })" data-month="5">May</a></li>
     <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 6 ? 0 : 6 })" data-month="6">Jun</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 7 ? 0 : 7 })" data-month="7">Jul</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 8 ? 0 : 8 })" data-month="8">Aug</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 9 ? 0 : 9 })" data-month="9">Sep</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 10 ? 0 : 10 })" data-month="10">Oct</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 11 ? 0 : 11 })" data-month="11">Nov</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 12 ? 0 : 12 })" data-month="12">Dec</a></li>
-</ul>
-<ul class="nav nav-pills nav-justified blog-header-month visible-xs visible-sm">
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 1 ? 0 : 1 })" data-month="1">Jan</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 2 ? 0 : 2 })" data-month="2">Feb</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 3 ? 0 : 3 })" data-month="3">Mar</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 4 ? 0 : 4 })" data-month="4">Apr</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 5 ? 0 : 5 })" data-month="5">May</a></li>
-    <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 6 ? 0 : 6 })" data-month="6">Jun</a></li>
-</ul>
-<ul class="nav nav-pills nav-justified blog-header-month visible-xs visible-sm">
     <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 7 ? 0 : 7 })" data-month="7">Jul</a></li>
     <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 8 ? 0 : 8 })" data-month="8">Aug</a></li>
     <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 9 ? 0 : 9 })" data-month="9">Sep</a></li>
