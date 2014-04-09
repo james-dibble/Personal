@@ -39,6 +39,13 @@ footer {
 
 @import "navbar.less";
 
+.btn {
+    &.btn-default {
+        background-image: linear-gradient(@white, @pureWhite 6%);
+        border: 1px solid @grey;
+    }
+}
+
 .summary {
     padding: 20px;
     background: @white;
@@ -171,7 +178,7 @@ footer {
     h1 {
         margin-top: -40px;
         text-align: center;
-        color: @red;
+        color: @white;
         font-size: 70px;
         z-index: 999;
     }
@@ -193,6 +200,26 @@ footer {
             background: @white;
             color: @red;
             box-shadow: 0 0 3px 1px #bbb;
+        }
+
+        a {
+            color: @white;
+
+            &.btn{
+                color: @red;
+            }
+
+            &:hover {
+                color: darken(@red, 20%);
+
+                i {
+                    color: darken(@red, 20%);   
+                }
+            }
+
+            i {
+                color: @white;
+            }
         }
     }
 
@@ -224,11 +251,11 @@ footer {
         display: block;
         padding-top: 40px;
 
-        h1{
+        h1 {
             font-size: 50px;
         }
 
-        h2{
+        h2 {
             font-size: 40px;
         }
 
