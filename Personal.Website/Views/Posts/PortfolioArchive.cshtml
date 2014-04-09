@@ -24,6 +24,11 @@
                         <p class="lead">@portfolio.Title</p>
                         <p>@portfolio.Abstract</p>
                         @this.Html.Partial("PostLink", portfolio)
+                        <span class="fa fa-tag"></span>
+                        @if (this.Model.Tags == null)
+                        {
+                            <span>No Tags</span>
+                        }
                         @foreach (var tag in portfolio.Tags == null ? new string[0] : portfolio.Tags.Split(','))
                         {
                             <span class="label label-primary">@tag</span>
@@ -44,18 +49,29 @@
             <div class="col-lg-8 col-md-8 col-sm-8">
                 <div class="summary-content-wrap">
                     <div class="summary-content text-right">
-                        <p class="lead">@portfolio.Title</p>
+                        <p class="lead">@blog.Title</p>
                         <p>@portfolio.Abstract</p>
-                        @this.Html.Partial("PostLink", portfolio)
+                        @if (portfolio.Tags == null)
+                        {
+                            <span>No Tags</span>
+                        }
                         @foreach (var tag in portfolio.Tags == null ? new string[0] : portfolio.Tags.Split(','))
                         {
                             <span class="label label-primary">@tag</span>
                         }
+                        <span class="fa fa-tag"></span>
+                        &nbsp;
+                        @this.Html.Partial("PostLink", portfolio)
                     </div>
+
                 </div>
             </div>
         </div>
     }
 
     count++;
+}
+@if (!this.Model.Any())
+{
+    this.Write(this.Html.Partial("PageTitle", "No Posts"));
 }

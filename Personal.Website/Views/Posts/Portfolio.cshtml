@@ -36,6 +36,11 @@
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <p>
+            <span class="fa fa-tag"></span>
+            @if (this.Model.Tags == null)
+            {
+                <span>No Tags</span>
+            }
             @foreach (var tag in this.Model.Tags == null ? new string[0] : this.Model.Tags.Split(','))
             {
                 <span class="label label-primary">@tag</span>

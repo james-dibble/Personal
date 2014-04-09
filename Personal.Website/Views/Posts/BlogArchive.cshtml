@@ -92,6 +92,6 @@
     }
     @if (!this.Model.Blogs.Any())
     {
-        <p class="lead">No Posts</p>
+        this.Write(this.Html.Partial("PageTitle", "No Posts"));
     }
 </div>
