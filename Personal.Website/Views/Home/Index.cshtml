@@ -9,9 +9,11 @@
             <h1>
                 Hello, I'm James Dibble
             </h1>
-            <div class="elipse">
-
-            </div>
+            <p class="text-center">
+                I'm also a @(Math.Abs(((DateTime.Now - new DateTime(1992, 7, 9)).Days / 365))) year old software
+                engineer living and working in Bristol, UK.  A self-confessed nerd, I love Microsoft software and Apple hardware.
+                I have been building websites for years now and have created web presences for a number of businesses.
+            </p>
         </div>
     </div>
     <div class="scroll-arrow" data-scroll-to="#websites">
@@ -28,7 +30,7 @@
         </div>
         <div class="col-lg-9">
             <h2>I does websites</h2>
-            <p>I have lots of experience in creating websites for all sorts of business.  From portfolios to eCommerce websites.</p>
+            <p>I have lots of experience in creating websites for all sorts of businesses.  From portfolios to eCommerce websites.</p>
             <a href="@this.Url.Action("portfolioarchive", "posts")" class="btn btn-primary">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
     </div>
@@ -110,6 +112,10 @@
             });
 
             var initScrollorama = function () {
+                if (window.innerWidth <= 480) {
+                    return;
+                }
+
                 var scrollorama = $.scrollorama({
                     blocks: '.jumbotron',
                     enablePin: false
@@ -117,7 +123,9 @@
 
                 scrollorama
                     .animate('#hello h1', { duration: $('#hello').height(), property: 'top', end: '+500px' })
-                    .animate('#hello .elipse', { duration: $('#hello').height() - 70, property: 'top', end: '+300px' })
+                    .animate('#hello p', { duration: $('#hello').height() - 70, property: 'top', end: '+400px' })
+                    .animate('#hello h1', { duration: $('#hello').height(), property: 'right', end: '+1500px' })
+                    .animate('#hello p', { duration: $('#hello').height() - 70, property: 'left', end: '+1000px' })
                     .animate('#websites .col-lg-9', { duration: $('#websites').height() - 70, property: 'right', start: '-1500px' })
                     .animate('#websites .elipse', { duration: $('#websites').height() - 70, property: 'left', start: '-1500px' })
                     .animate('#apps .col-lg-9', { duration: $('#apps').height() - 70, property: 'right', start: '-1500px' })
