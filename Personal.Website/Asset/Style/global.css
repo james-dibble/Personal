@@ -310,4 +310,8 @@ footer .scroll-arrow:hover i:last-child {
     display: block;
   }
 }
+#wordcloud {
+  height: 200px;
+  width: 100%;
+}
 /*# sourceMappingURL=global.css.map */

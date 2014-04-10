@@ -22,12 +22,12 @@
         $(this).ekkoLightbox();
     });
 
-    //$.getJSON('/posts/wordcloud', function(data) {
-    //    $("#wordcloud").jQCloud(data, {
-    //        width: $("#wordcloud").parent().width(),
-    //        height: $("#wordcloud").parent().width()
-    //    });
-    //});
+    $.getJSON('/posts/wordcloud', function(data) {
+        $("#wordcloud").jQCloud(data, {
+            height: $("#wordcloud").height(),
+            width: $("#wordcloud").width()
+        });
+    });
 });
 
 (function () {

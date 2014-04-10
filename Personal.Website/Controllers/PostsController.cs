@@ -180,7 +180,12 @@
         {
             var tags = this._postService.GetAllTags().ToList();
 
-            var cloud = tags.Distinct().Select(tag => new { text = tag, weight = tags.Count(t => t == tag) });
+            var cloud = tags.Distinct().Select(tag => new
+                                                      {
+                                                          text = tag.Trim(), 
+                                                          weight = tags.Count(t => t == tag),
+                                                          link = this.Url.Action("blogarchivetag", "posts", new { tag = tag.Trim().ToLower() })
+                                                      });
 
             return this.Json(cloud, JsonRequestBehavior.AllowGet);
         }
