@@ -1,0 +1,13 @@
+﻿@model IEnumerable<KeyValuePair<string, int>>
+
+<ul class="nav nav-pills nav-stacked">
+    @foreach (var tag in this.Model.OrderByDescending(tag => tag.Value))
+    {
+        <li>
+            <a href="@this.Url.Action("blogarchivetag", "posts", new { tag = tag.Key.Trim().ToLower() })">
+                <span class="badge pull-right">@tag.Value</span>
+                @tag.Key
+            </a>
+        </li>
+    }
+</ul>

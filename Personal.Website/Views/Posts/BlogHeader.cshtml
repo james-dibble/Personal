@@ -1,5 +1,5 @@
 ﻿@model Personal.Website.ViewModels.BlogHeaderViewModel
-<div data-spy="affix" data-offset-top="30" data-offset-bottom="60" class="hidden-xs">
+<div data-spy="affix" data-offset-top="30" data-offset-bottom="50" class="hidden-xs affix-top col-lg-2 col-md-3 col-sm-3">
     <br />
     <p>Year</p>
     <ul class="nav nav-pills blog-header-year">
@@ -32,5 +32,6 @@
         <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 12 ? 0 : 12 })" data-month="12">Dec</a></li>
     </ul>
     <br />
-    <div id="wordcloud"></div>
+    <p>Tags</p>
+    @this.Html.Action("Tags", "Posts")
 </div>

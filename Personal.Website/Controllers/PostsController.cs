@@ -176,18 +176,14 @@
             return this.RedirectToAction("WritePortfolio", "Posts", new { id = savedPortfolio.Id });
         }
 
-        public ActionResult WordCloud()
+        public ActionResult Tags()
         {
             var tags = this._postService.GetAllTags().ToList();
 
-            var cloud = tags.Distinct().Select(tag => new
-                                                      {
-                                                          text = tag.Trim(), 
-                                                          weight = tags.Count(t => t == tag),
-                                                          link = this.Url.Action("blogarchivetag", "posts", new { tag = tag.Trim().ToLower() })
-                                                      });
+            var cloud =
+                tags.Distinct().Select(tag => new KeyValuePair<string, int>(tag.Trim(), tags.Count(t => t == tag)));
 
-            return this.Json(cloud, JsonRequestBehavior.AllowGet);
+            return this.PartialView(cloud);
         }
     }
 }

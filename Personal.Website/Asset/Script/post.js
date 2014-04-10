@@ -21,13 +21,6 @@
         event.preventDefault();
         $(this).ekkoLightbox();
     });
-
-    $.getJSON('/posts/wordcloud', function(data) {
-        $("#wordcloud").jQCloud(data, {
-            height: $("#wordcloud").height(),
-            width: $("#wordcloud").width()
-        });
-    });
 });
 
 (function () {
