@@ -31,7 +31,7 @@
         <div class="col-lg-9">
             <h2>I does websites</h2>
             <p>I have lots of experience in creating websites for all sorts of businesses.  From portfolios to eCommerce websites.</p>
-            <a href="@this.Url.Action("portfolioarchive", "posts")" class="btn btn-primary">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
+            <a href="@this.Url.Action("portfolioarchivetag", "posts", new { tag = "website".ToLower() })" class="btn btn-primary">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
     </div>
     <div class="scroll-arrow" data-scroll-to="#apps">
@@ -52,7 +52,7 @@
                 I always make websites compatible with mobile phones, but I can also create native apps too.  I have also made
                 applications for desktop.
             </p>
-            <a href="@this.Url.Action("portfolioarchive", "posts")" class="btn btn-default">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
+            <a href="@this.Url.Action("portfolioarchivetag", "posts", new { tag = "app".ToLower() })" class="btn btn-default">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
     </div>
     <div class="scroll-arrow" data-scroll-to="#blogging">
