@@ -37,6 +37,6 @@ namespace Personal.ServiceLayer
 
         IEnumerable<Portfolio> GetPortfolios(string tag);
 
-        IEnumerable<string> GetAllTags();
+        IEnumerable<string> GetAllTags<TPost>() where TPost : Post;
     }
 }

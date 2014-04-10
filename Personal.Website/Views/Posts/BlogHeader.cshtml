@@ -31,7 +31,5 @@
         <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 11 ? 0 : 11 })" data-month="11">Nov</a></li>
         <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 12 ? 0 : 12 })" data-month="12">Dec</a></li>
     </ul>
-    <br />
-    <p>Tags</p>
-    @this.Html.Action("Tags", "Posts")
+    @this.Html.Action("Tags", "Posts", new { postType = typeof(Blog) })
 </div>

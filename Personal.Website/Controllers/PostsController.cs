@@ -176,14 +176,24 @@
             return this.RedirectToAction("WritePortfolio", "Posts", new { id = savedPortfolio.Id });
         }
 
-        public ActionResult Tags()
+        public ActionResult Tags(Type postType)
         {
-            var tags = this._postService.GetAllTags().ToList();
+            IEnumerable<string> tags = null;
+
+            if (postType == typeof(Portfolio))
+            {
+                tags = this._postService.GetAllTags<Portfolio>().ToList();
+            }
+
+            if (postType == typeof(Blog))
+            {
+                tags = this._postService.GetAllTags<Blog>().ToList();
+            }
 
             var cloud =
                 tags.Distinct().Select(tag => new KeyValuePair<string, int>(tag.Trim(), tags.Count(t => t == tag)));
-
-            return this.PartialView(cloud);
+            
+            return this.PartialView(new TagViewModel { Tags = cloud, PostType = postType });
         }
     }
 }

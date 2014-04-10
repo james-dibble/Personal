@@ -179,11 +179,11 @@
             return portfolios;
         }
 
-        public IEnumerable<string> GetAllTags()
+        public IEnumerable<string> GetAllTags<TPost>() where TPost : Post
         {
-            var blogsWithTags = this._persistence.GetRepository<Blog>().GetMany(b => b.Tags != null);
+            var blogsWithTags = this._persistence.GetRepository<TPost>().GetMany(b => b.Tags != null);
 
-            var tags = blogsWithTags.SelectMany(b => b.Tags.Split(','));
+            var tags = blogsWithTags.SelectMany(b => b.Tags.Split(',')).Select(t => t.Trim());
 
             return tags;
         }
