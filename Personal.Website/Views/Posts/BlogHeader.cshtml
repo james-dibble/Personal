@@ -1,5 +1,7 @@
 ﻿@model Personal.Website.ViewModels.BlogHeaderViewModel
 <div data-spy="affix" data-offset-top="0" data-offset-bottom="200" class="hidden-xs">
+    <br />
+    <p>Year</p>
     <ul class="nav nav-pills blog-header-year">
         @foreach (var year in this.Model.Blogs.Select(b => b.Date.Year).Distinct().OrderBy(year => year))
         {
@@ -14,6 +16,7 @@
         }
     </ul>
     <br />
+    <p>Month</p>
     <ul class="nav nav-pills blog-header-month">
         <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 1 ? 0 : 1 })" data-month="1">Jan</a></li>
         <li><a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.CanRemove && this.Model.Month == 2 ? 0 : 2 })" data-month="2">Feb</a></li>
