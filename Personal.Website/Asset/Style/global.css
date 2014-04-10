@@ -82,8 +82,8 @@ footer .scroll-arrow:hover i:last-child {
   top: 0;
   right: 0;
   height: 100%;
-  background: #fafafa;
   z-index: 1030;
+  background: #fafafa;
   box-shadow: 1px 1px 25px #bbbbbb;
 }
 #sidebar .btn {
@@ -115,8 +115,10 @@ footer .scroll-arrow:hover i:last-child {
 #wrap > .container-fluid {
   margin-top: -73px;
 }
-.affix {
+div[data-spy="affix"] {
   right: 0;
+  background: #fafafa;
+  box-shadow: 1px 1px 25px #bbbbbb;
 }
 .btn.btn-default {
   background-image: linear-gradient(#fafafa, #ffffff 6%);
