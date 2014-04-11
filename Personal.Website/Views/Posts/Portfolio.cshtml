@@ -12,6 +12,7 @@
 @section Script
 {
     <script src="http://rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
+    <script src="//asset.jdibble.co.uk/script/imageLoader.min.js"></script>
     <script src="@this.Url.Content("~/asset/script/post.js")"></script>
 }
 <div class="col-lg-2 col-md-3 col-sm-3">
@@ -19,7 +20,7 @@
     {
         <a href="@image.Path" data-toggle="lightbox" data-gallery="multiimages" data-title="@this.Model.Title">
             <div class="elipse">
-                <div class="img" style="background: url('@image.Path')"></div>
+                <div class="img" data-src="@image.Path"></div>
             </div>
         </a>
         <br />
@@ -42,11 +43,6 @@
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         @this.Html.Raw(this.Model.Content)
-    </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div id="disqus_thread"></div>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
 </div>
 <div data-spy="affix" data-offset-top="40" data-offset-bottom="50" class="hidden-xs affix-top col-lg-2 col-md-2 col-sm-2">

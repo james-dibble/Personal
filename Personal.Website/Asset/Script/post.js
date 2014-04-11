@@ -21,6 +21,8 @@
         event.preventDefault();
         $(this).ekkoLightbox();
     });
+
+    $('div[data-src]').imageLoader();
 });
 
 (function () {

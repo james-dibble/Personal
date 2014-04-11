@@ -1,11 +1,16 @@
-﻿@using System.Web.Services.Description
-@model IEnumerable<Portfolio>
+﻿@model IEnumerable<Portfolio>
 
 @{
     ViewBag.Title = "James Dibble - Portfolio";
     ViewBag.Description = "Examples of completed work; the portfolio of James Dibble.";
 
     var count = 1;
+}
+
+@section Script
+{
+    <script src="//asset.jdibble.co.uk/script/imageLoader.min.js"></script>
+    <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
 }
 
 <div class="col-lg-10 col-md-9 col-sm-9">
@@ -16,7 +21,7 @@
             <div class="col-lg-8 col-md-8 col-sm-8 summary">
                 <div class="col-lg-4 col-md-8 col-sm-8">
                     <div class="elipse">
-                        <div class="img" style="background: url('@portfolio.Images.First().Path')"></div>
+                        <div class="img" data-src="@portfolio.Images.First().Path"></div>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8">
@@ -37,7 +42,7 @@
             <div class="col-lg-8 col-lg-offset-4 col-md-8 col-md-offset-4 col-sm-8 col-sm-offset-4 summary">
                 <div class="col-lg-4 col-md-8 col-sm-8">
                     <div class="elipse">
-                        <div class="img" style="background: url('@portfolio.Images.First().Path')"></div>
+                        <div class="img" data-src="@portfolio.Images.First().Path"></div>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8">

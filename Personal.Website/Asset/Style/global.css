@@ -101,6 +101,9 @@ footer .scroll-arrow:hover i:last-child {
   margin-top: -1px;
   border: none;
 }
+#sidebar li a {
+  border-radius: 0;
+}
 #wrap {
   padding-top: 113px;
 }
