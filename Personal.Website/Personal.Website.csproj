@@ -143,14 +143,13 @@
     <Content Include="Asset\Style\global.css">
       <DependentUpon>global.less</DependentUpon>
     </Content>
-    <Content Include="Asset\Style\global.min.css" />
-    <Content Include="Asset\Style\navbar.css" />
-    <Content Include="Asset\Style\navbar.min.css" />
+    <Content Include="Asset\Style\global.min.css">
+      <DependentUpon>global.css</DependentUpon>
+    </Content>
     <Content Include="Asset\Style\summernote.css" />
     <Content Include="Asset\Style\variables.css">
       <DependentUpon>variables.less</DependentUpon>
     </Content>
-    <Content Include="Asset\Style\variables.min.css" />
     <Content Include="BingSiteAuth.xml" />
     <Content Include="Global.asax" />
     <Content Include="googled89da873de4b424d.html" />
@@ -185,7 +184,6 @@
       <DependentUpon>global.css</DependentUpon>
     </Content>
     <Content Include="Asset\Style\global.less" />
-    <Content Include="Asset\Style\navbar.css.map" />
     <Content Include="Asset\Style\navbar.less" />
     <Content Include="Asset\Style\variables.less" />
     <Content Include="Views\Home\Contact.cshtml" />

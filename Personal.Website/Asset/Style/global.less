@@ -67,6 +67,14 @@ footer {
     }
 }
 
+.nav-stacked {
+    li {
+        a {
+            border-radius: 0;
+        }
+    }
+}
+
 @media (min-width: @screen-tablet) {
     footer {
         height: @footer-expand-height;
@@ -80,7 +88,7 @@ footer {
 
 @import "navbar.less";
 
-div[data-spy="affix"]{
+div[data-spy="affix"] {
     right: 0;
     background: @white;
     box-shadow: 1px 1px 25px #bbbbbb;
@@ -311,9 +319,4 @@ div[data-spy="affix"]{
             display: block;
         }
     }
-}
-
-#wordcloud{
-    height: 200px;
-    width: 100%;
 }

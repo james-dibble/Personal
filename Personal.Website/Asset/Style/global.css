@@ -53,6 +53,9 @@ footer .scroll-arrow:hover i:first-child {
 footer .scroll-arrow:hover i:last-child {
   top: -38px;
 }
+.nav-stacked li a {
+  border-radius: 0;
+}
 @media (min-width: 768px) {
   footer {
     height: 50px;
@@ -100,9 +103,6 @@ footer .scroll-arrow:hover i:last-child {
   background: #d9230f;
   margin-top: -1px;
   border: none;
-}
-#sidebar li a {
-  border-radius: 0;
 }
 #wrap {
   padding-top: 113px;
@@ -300,9 +300,5 @@ div[data-spy="affix"] {
   .jumbotron .container-fluid {
     display: block;
   }
-}
-#wordcloud {
-  height: 200px;
-  width: 100%;
 }
 /*# sourceMappingURL=global.css.map */
