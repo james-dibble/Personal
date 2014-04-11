@@ -1,9 +1,8 @@
-using System.Data.Entity;
-using Personal.Persistence;
-using Personal.ServiceLayer;
-
 namespace Personal.Website
 {
+    using System.Data.Entity;
+    using Personal.Persistence;
+    using Personal.ServiceLayer;
     using System.Web.Mvc;
     using Microsoft.Practices.Unity;
     using Unity.Mvc4;
