@@ -11,6 +11,17 @@
     if (!Modernizr.cssvhunit) {
         $('.jumbotron').css('min-height', $(window).height());
     }
+
+    $('*[data-toggle="collapse-width"]').click(function () {
+        var target = $($(this).data('target'));
+
+        if (target.hasClass('out')) {
+            target.removeClass('out');
+            return;
+        }
+
+        target.addClass('out');
+    });
 </script>
 @*<script>
     (function (i, s, o, g, r, a, m) {

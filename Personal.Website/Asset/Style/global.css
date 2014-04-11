@@ -80,11 +80,16 @@ footer .scroll-arrow:hover i:last-child {
 #sidebar {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -166px;
   height: 100%;
+  width: 165px;
   z-index: 1030;
   background: #fafafa;
   box-shadow: 1px 1px 25px #bbbbbb;
+  transition: right 0.2s ease-out;
+}
+#sidebar.out {
+  right: 0;
 }
 #sidebar .btn {
   position: relative;
@@ -95,19 +100,6 @@ footer .scroll-arrow:hover i:last-child {
   background: #d9230f;
   margin-top: -1px;
   border: none;
-}
-#sidebar .collapse,
-#sidebar .collapsing {
-  width: auto !important;
-}
-#sidebar .collapse li,
-#sidebar .collapsing li {
-  margin-top: 0 !important;
-  width: 200px !important;
-}
-#sidebar .collapse li a,
-#sidebar .collapsing li a {
-  border-radius: 0 !important;
 }
 #wrap {
   padding-top: 113px;
