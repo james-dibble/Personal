@@ -1,6 +1,6 @@
 ﻿@model Personal.Website.ViewModels.BlogHeaderViewModel
 @{
-    this.Title = string.Concat("James Dibble - Blog", this.Model.GetDateString());
+    this.Title = string.Concat("Blog", this.Model.GetDateString());
     this.Description = string.Concat("Ramblings of a .Net Web Developer; the blog of James Dibble.", this.Model.GetDateString());
     var count = 1;
 }
