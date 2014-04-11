@@ -150,6 +150,9 @@
     <Content Include="Asset\Style\variables.css">
       <DependentUpon>variables.less</DependentUpon>
     </Content>
+    <Content Include="Asset\Style\variables.min.css">
+      <DependentUpon>variables.css</DependentUpon>
+    </Content>
     <Content Include="BingSiteAuth.xml" />
     <Content Include="Global.asax" />
     <Content Include="googled89da873de4b424d.html" />

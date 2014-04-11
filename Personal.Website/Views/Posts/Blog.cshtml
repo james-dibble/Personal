@@ -1,7 +1,7 @@
 ﻿@model Blog
 @{
-    ViewBag.Title = string.Join(" - ", "James Dibble", "Blog", this.Model.Title);
-    ViewBag.Description = this.Model.Abstract;
+    this.Title = string.Join(" - ", "James Dibble", "Blog", this.Model.Title);
+    this.Description = this.Model.Abstract;
 }
 @section Meta
 {
