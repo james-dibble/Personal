@@ -184,7 +184,8 @@ div[data-spy="affix"] {
 }
 .jumbotron {
   position: relative;
-  min-height: 100vmin;
+  height: 100vh;
+  min-height: 100vh;
   display: table;
   width: 100%;
   padding-top: 0;
