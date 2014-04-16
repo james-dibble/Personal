@@ -12,7 +12,8 @@
             <p class="text-center">
                 I'm also a @(Math.Abs(((DateTime.Now - new DateTime(1992, 7, 9)).Days / 365))) year old software
                 engineer living and working in Bristol, UK.  A self-confessed nerd, I love Microsoft software and Apple hardware.
-                I have been building websites for years now and have created web presences for a number of businesses.
+                I have been building websites for years now and have created web presences for a number of businesses.  I'm always
+                exploring the latest technologies and sharing my experiences with the world.
             </p>
         </div>
     </div>
@@ -30,7 +31,11 @@
         </div>
         <div class="col-lg-9">
             <h2>I create websites</h2>
-            <p>I have lots of experience in creating websites for all sorts of businesses.  From portfolios to eCommerce websites.</p>
+            <p>
+                I have lots of experience in creating websites for all sorts of businesses, from portfolios to eCommerce websites.
+                I predominantly build websites using ASP.Net and love using all the latest web technologies.
+                Razor, LESS, HTML5, CSS3, jQuery and AngularJs are just a small part of my web repertoire.
+            </p>
             <a href="@this.Url.Action("portfolioarchivetag", "posts", new { tag = "website".ToLower() })" class="btn btn-primary">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
     </div>
@@ -49,8 +54,9 @@
         <div class="col-lg-9">
             <h2>I create applications</h2>
             <p>
-                I always make websites compatible with mobile phones, but I can also create native apps too.  I have also made
-                applications for desktop.
+                I always make websites compatible with mobile phones, but I can also create native apps too.  Using a mobile app
+                is becoming more and more important for consuming data on the go.  Applications for aiding with day-to-day
+                operations is also very important and I have created a range of desktop software.
             </p>
             <a href="@this.Url.Action("portfolioarchivetag", "posts", new { tag = "app".ToLower() })" class="btn btn-default">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
@@ -69,7 +75,10 @@
         </div>
         <div class="col-lg-9">
             <h2>I do blogging</h2>
-            <p>I like to share my solutions to any tough problems I come accross, and I share alot of my code with the world.</p>
+            <p>
+                I like to share my solutions to any tough problems I come accross, and I share alot of my code with the world.
+                I also like to share small insights into my life in Bristol every so often.
+            </p>
             <a href="@this.Url.Action("blogarchive", "posts")" class="btn btn-primary">Blog&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
     </div>
@@ -89,7 +98,7 @@
             <h2>I am social</h2>
             <p>
                 I'd love to hear from you!  I use most of the big social networks so please do get in touch.  If you have a project in
-                mind, <a href="@this.Url.Action("contact", "home")">contact me</a>.
+                mind, <a href="@this.Url.Action("contact", "home")">contact me here</a>.
             </p>
             <a href="https://twitter.com/dibble_james" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>&nbsp;&nbsp;
             <a href="https://plus.google.com/104250015987511319684/posts" target="_blank"><i class="fa fa-google-plus fa-3x"></i></a>&nbsp;&nbsp;
@@ -105,7 +114,7 @@
     <script>
         $(function () {
             var initScrollorama = function () {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth < 768) {
                     return;
                 }
 
