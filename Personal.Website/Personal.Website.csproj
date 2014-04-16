@@ -132,13 +132,9 @@
     <Content Include="Asset\Images\escheresque_ste.png" />
     <Content Include="Asset\Images\loading.GIF" />
     <Content Include="Asset\Script\global.js" />
-    <Content Include="Asset\Script\global.min.js" />
-    <Content Include="Asset\Script\home.contact.js" />
-    <Content Include="Asset\Script\home.contact.min.js" />
-    <Content Include="Asset\Script\home.index.js" />
-    <Content Include="Asset\Script\home.index.min.js" />
-    <Content Include="Asset\Script\post.js" />
-    <Content Include="Asset\Script\post.min.js" />
+    <Content Include="Asset\Script\global.min.js">
+      <DependentUpon>global.js</DependentUpon>
+    </Content>
     <Content Include="Asset\Script\summernote.min.js" />
     <Content Include="Asset\Style\global.css">
       <DependentUpon>global.less</DependentUpon>
@@ -179,10 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Asset\Script\global.min.js.map" />
-    <Content Include="Asset\Script\home.contact.min.js.map" />
-    <Content Include="Asset\Script\home.index.min.js.map" />
-    <Content Include="Asset\Script\post.min.js.map" />
     <Content Include="Asset\Style\global.css.map">
       <DependentUpon>global.css</DependentUpon>
     </Content>
@@ -214,6 +206,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Asset\Script\global.min.js.map">
+      <DependentUpon>global.min.js</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
