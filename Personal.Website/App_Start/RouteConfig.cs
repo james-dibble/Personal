@@ -20,6 +20,11 @@
                 new { controller = "Posts", action = "BlogArchive", year = 0, month = 0 });
 
             routes.MapRoute(
+                "BlogArchiveTag",
+                "blog/tag/{tag}",
+                new { controller = "Posts", action = "BlogArchiveTag", year = 0, month = 0 });
+
+            routes.MapRoute(
                 "BlogArchiveYear",
                 "blog/{year}",
                 new { controller = "Posts", action = "BlogArchive", month = 0 },
@@ -41,6 +46,11 @@
                  "PortfolioArchive",
                  "portfolio",
                  new { controller = "Posts", action = "PortfolioArchive" });
+
+            routes.MapRoute(
+                 "PortfolioArchiveTag",
+                 "portfolio/tag/{tag}",
+                 new { controller = "Posts", action = "PortfolioArchiveTag" });
 
             routes.MapRoute(
                 "Blog",

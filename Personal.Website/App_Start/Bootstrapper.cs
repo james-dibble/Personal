@@ -1,9 +1,8 @@
-using System.Data.Entity;
-using Personal.Persistence;
-using Personal.ServiceLayer;
-
 namespace Personal.Website
 {
+    using System.Data.Entity;
+    using Personal.Persistence;
+    using Personal.ServiceLayer;
     using System.Web.Mvc;
     using Microsoft.Practices.Unity;
     using Unity.Mvc4;
@@ -33,7 +32,6 @@ namespace Personal.Website
             container.RegisterType<DbContext, PersonalPersistenceContext>(new HierarchicalLifetimeManager());
             container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
             container.RegisterType<IPostService, PostService>();
-            container.RegisterType<ITwitterService, TwitterService>();
         }
     }
 }

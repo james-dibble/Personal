@@ -1,43 +1,156 @@
-﻿@model IEnumerable<Post>
-@{
-    ViewBag.Title = "James Dibble - .Net Web Developer";
-    ViewBag.Description = "James Dibble is a .Net web developer specialising in ASP.Net MVC.";
+﻿@{
+    this.Title = ".Net Web Developer";
+    this.Description = "James Dibble is a .Net developer specialised in creating responsive websites using ASP.Net MVC.";
 }
 
-@section Script
-{
-    <script src="@this.Url.Content("~/asset/script/home.index.min.js")"></script>
-}
-
-<div class="jumbotron">
-    <div class="text-center">
-        <h1>James Dibble</h1>
-        <h2>.Net Web Developer</h2>
-        <hr />
-        <p class="lead">
-            A software developer by trade, I took up doing web design to earn a bit of dollor to get me through my degree.
-            I loved doing it so decided to make one for myself.  I come from a C# background so generally develop websites
-            using ASP.Net MVC.  I dabble in things such as HTML5, jQuery, AngularJS, LESS as well Java and PHP.
-        </p>
-        <p class="lead">
-            I'm always looking for new projects, so if you have one in mind that requires an internet pressence,
-            <a href="@this.Url.Action("contact", "home")">let me know</a>.  Take a look at some of the web designs
-            I have completed in my <a href="@this.Url.Action("portfolioarchive", "posts")">portfolio</a>.
-        </p>
-        <p class="lead">
-            My <a href="@this.Url.Action("blogarchive", "posts")">blog</a> contains some interesting posts on my nerdy travels
-            through the web design world.  Please feel free to leave any comments and questions.
-        </p>
-        <div class="btn-group">
-            <a class="btn btn-primary btn-lg" href="@this.Url.Action("portfolioarchive", "posts")">Portfolio</a>
-            <a class="btn btn-primary btn-lg" href="@this.Url.Action("blogarchive", "posts")">Blog</a>
-            <a class="btn btn-primary btn-lg" href="@this.Url.Action("contact", "home")">Contact Me</a>
+<div class="jumbotron primary" id="hello">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <h1>
+                Hello, I'm James Dibble
+            </h1>
+            <p class="text-center">
+                I'm also a @(Math.Abs(((DateTime.Now - new DateTime(1992, 7, 9)).Days / 365))) year old software
+                engineer living and working in Bristol, UK.  I'm professionally experienced in Agile (SCRUM) .Net Development.
+                A self-confessed nerd, I love Microsoft software and Apple hardware. I have been building websites for years
+                now and have created web presences for a number of businesses.  I'm always exploring the latest technologies
+                and sharing my experiences with the world.
+            </p>
         </div>
-        <hr />
+    </div>
+    <div class="scroll-arrow" data-scroll-to="#websites">
+        <i class="fa fa-angle-down"></i>
+        <i class="fa fa-angle-down"></i>
+    </div>
+</div>
+<div class="jumbotron" id="websites">
+    <div class="container-fluid">
+        <div class="col-lg-3">
+            <div class="elipse">
+                <p>&lt;html/&gt;</p>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <h2>I create websites</h2>
+            <p>
+                I have lots of experience in creating websites for all sorts of businesses, from portfolios to eCommerce websites.
+                I predominantly build websites using ASP.Net and love using all the latest web technologies.
+                Razor, LESS, HTML5, CSS3, jQuery and AngularJs are just a small part of my web repertoire.
+            </p>
+            <a href="@this.Url.Action("portfolioarchivetag", "posts", new { tag = "website".ToLower() })" class="btn btn-primary">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
+        </div>
+    </div>
+    <div class="scroll-arrow" data-scroll-to="#apps">
+        <i class="fa fa-angle-down"></i>
+        <i class="fa fa-angle-down"></i>
+    </div>
+</div>
+<div class="jumbotron primary" id="apps">
+    <div class="container-fluid">
+        <div class="col-lg-3">
+            <div class="elipse">
+                <p><i class="fa fa-windows"></i>&nbsp;<i class="fa fa-android"></i>&nbsp;<i class="fa fa-apple"></i></p>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <h2>I create applications</h2>
+            <p>
+                I always make websites compatible with mobile phones, but I can also create native apps too.  Using a mobile app
+                is becoming more and more important for consuming data on the go.  Applications for aiding with day-to-day
+                operations is also very important and I have created a range of desktop software.
+            </p>
+            <a href="@this.Url.Action("portfolioarchivetag", "posts", new { tag = "app".ToLower() })" class="btn btn-default">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
+        </div>
+    </div>
+    <div class="scroll-arrow" data-scroll-to="#blogging">
+        <i class="fa fa-angle-down"></i>
+        <i class="fa fa-angle-down"></i>
+    </div>
+</div>
+<div class="jumbotron" id="blogging">
+    <div class="container-fluid">
+        <div class="col-lg-3">
+            <div class="elipse">
+                <p><i class="fa fa-comments-o fa-2x"></i></p>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <h2>I do blogging</h2>
+            <p>
+                I like to share my solutions to any tough problems I come accross, and I share alot of my code with the world.
+                I also like to share small insights into my life in Bristol every so often.
+            </p>
+            <a href="@this.Url.Action("blogarchive", "posts")" class="btn btn-primary">Blog&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
+        </div>
+    </div>
+    <div class="scroll-arrow" data-scroll-to="#social">
+        <i class="fa fa-angle-down"></i>
+        <i class="fa fa-angle-down"></i>
+    </div>
+</div>
+<div class="jumbotron primary" id="social">
+    <div class="container-fluid">
+        <div class="col-lg-3">
+            <div class="elipse">
+                <p><i class="fa fa-users fa-2x"></i></p>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <h2>I am social</h2>
+            <p>
+                I'd love to hear from you!  I use most of the big social networks so please do get in touch.  Checkout my open source code
+                on <a href="https://github.com/james-dibble/" target="_blank">Github</a> If you have any kind of project in
+                mind that you think I can help with, <a href="@this.Url.Action("contact", "home")">contact me here</a>.
+            </p>
+            <a href="https://twitter.com/dibble_james" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>&nbsp;&nbsp;
+            <a href="https://plus.google.com/104250015987511319684/posts" target="_blank"><i class="fa fa-google-plus fa-3x"></i></a>&nbsp;&nbsp;
+            <a href="http://www.linkedin.com/in/dibblejames" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>&nbsp;&nbsp;
+            <a href="https://github.com/james-dibble/" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+        </div>
     </div>
 </div>
 
-@foreach (var post in this.Model.Take(12))
+@section Script
 {
-    this.Html.RenderPartial("~/Views/Posts/PostLink.cshtml", post);
+    <script src="http://asset.jdibble.co.uk/script/jquery.scrollorama.js"></script>
+    <script>
+        $(function () {
+            var initScrollorama = function () {
+                if (window.innerWidth < 768) {
+                    return;
+                }
+
+                var scrollorama = $.scrollorama({
+                    blocks: '.jumbotron',
+                    enablePin: false
+                });
+
+                scrollorama
+                    .animate('#hello h1', { duration: $('#hello').height(), property: 'top', end: '+500px' })
+                    .animate('#hello p', { duration: $('#hello').height() - 70, property: 'top', end: '+400px' })
+                    .animate('#hello h1', { duration: $('#hello').height(), property: 'right', end: '+1500px' })
+                    .animate('#hello p', { duration: $('#hello').height() - 70, property: 'left', end: '+1000px' })
+                    .animate('#websites .col-lg-9', { duration: $('#websites').height() - 70, property: 'right', start: '-1500px' })
+                    .animate('#websites .elipse', { duration: $('#websites').height() - 70, property: 'left', start: '-1500px' })
+                    .animate('#apps .col-lg-9', { duration: $('#apps').height() - 70, property: 'right', start: '-1500px' })
+                    .animate('#apps .elipse', { duration: $('#apps').height() - 70, property: 'left', start: '-1500px' })
+                    .animate('#blogging .col-lg-9', { duration: $('#blogging').height() - 70, property: 'right', start: '-1500px' })
+                    .animate('#blogging .elipse', { duration: $('#blogging').height() - 70, property: 'left', start: '-1500px' })
+                    .animate('#social .col-lg-9', { duration: $('#social').height() - 70, property: 'right', start: '-1500px' })
+                    .animate('#social .elipse', { duration: $('#social').height() - 70, property: 'left', start: '-1500px' })
+
+                    .animate('#websites .col-lg-9', { duration: $('#websites').height() - 70, delay: $('#websites').height() + 180, property: 'top', end: '+400px' })
+                    .animate('#websites .elipse', { duration: $('#websites').height() - 70, delay: $('#websites').height() + 180, property: 'top', end: '+500px' })
+                    .animate('#apps .col-lg-9', { duration: $('#apps').height() - 70, delay: $('#apps').height() + 180, property: 'top', end: '+400px' })
+                    .animate('#apps .elipse', { duration: $('#apps').height() - 70, delay: $('#apps').height() + 180, property: 'top', end: '+500px' })
+                    .animate('#blogging .col-lg-9', { duration: $('#blogging').height() - 70, delay: $('#blogging').height() + 180, property: 'top', end: '+400px' })
+                    .animate('#blogging .elipse', { duration: $('#blogging').height() - 70, delay: $('#blogging').height() + 180, property: 'top', end: '+500px' })
+                ;
+            };
+
+            $(window).resize(initScrollorama);
+
+            initScrollorama();
+        });
+    </script>
 }

@@ -1,7 +1,7 @@
 ﻿@model Blog
 @{
-    ViewBag.Title = string.Join(" - ", "James Dibble", "Blog", this.Model.Title);
-    ViewBag.Description = this.Model.Abstract;
+    this.Title = string.Join(" - ", "Blog", this.Model.Title);
+    this.Description = this.Model.Abstract;
 }
 @section Meta
 {
@@ -11,32 +11,30 @@
 {
     <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
 }
-@this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Date.Year, month = this.Model.Date.Month, canRemove = false })
-@this.Html.Partial("PageTitle", string.Join(" - ", this.Model.Date.ToString("d MMMM yyyy"), this.Model.Title))
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <p class="lead animate">@this.Model.Abstract</p>
-            <div class="animate">
-                @this.Html.Raw(this.Model.Content)
-            </div>
+<div class="col-lg-10 col-md-10 col-sm-9">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="page-header">
+            <h1>@this.Model.Title</h1>
         </div>
     </div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-            <p class="lead">
-                Comments
-            </p>
-            <hr />
-        </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p class="lead">@this.Model.Abstract</p>
     </div>
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-            <div id="disqus_thread"></div>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p>
+            @this.Model.Date.ToString("dddd d MMMM yyyy")
+            &nbsp;<span class="fa fa-tag"></span>
+            @this.Html.Partial("TagLinks", this.Model)
+        </p>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        @this.Html.Raw(this.Model.Content)
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
 </div>
+
+@this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Date.Year, month = this.Model.Date.Month, canRemove = false })

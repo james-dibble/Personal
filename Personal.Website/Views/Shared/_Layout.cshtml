@@ -7,18 +7,17 @@
     @this.Html.Partial("Style")
     @this.RenderSection("Style", false)
 </head>
-<body>
-    @this.Html.Partial("Sidebar")
-    <div class="wrap" id="wrap">
-        <section class="container">
-            <div class="row" id="content">
-                @this.RenderBody()
-                @this.Html.Partial("LoadingSquare")
-            </div>
-        </section>
-    </div>
-    @this.Html.Partial("Footer")
-    @this.Html.Partial("Script")
-    @this.RenderSection("Script", false)
-</body>
+    <body>
+        @this.Html.Partial("Header")
+        <div class="wrap" id="wrap">
+            <section class="container-fluid">
+                <div class="row" id="content">
+                    @this.RenderBody()
+                </div>
+            </section>
+        </div>
+        @this.Html.Partial("Footer")
+        @this.Html.Partial("Script")
+        @this.RenderSection("Script", false)
+    </body>
 </html>

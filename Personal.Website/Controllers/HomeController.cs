@@ -11,19 +11,15 @@ namespace Personal.Website.Controllers
     public class HomeController : Controller
     {
         private readonly IPostService _postService;
-        private readonly ITwitterService _twitterService;
-
-        public HomeController(IPostService postService, ITwitterService twitterService)
+        
+        public HomeController(IPostService postService)
         {
             this._postService = postService;
-            this._twitterService = twitterService;
         }
 
         public ActionResult Index()
         {
-            var posts = this._postService.GetAllPosts();
-            
-            return this.View(posts);
+            return this.View();
         }
 
         public ActionResult Contact()

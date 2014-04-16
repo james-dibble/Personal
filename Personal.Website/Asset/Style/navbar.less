@@ -1,0 +1,54 @@
+﻿.navbar {
+    .navbar-header {
+        float: left;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+
+        .navbar-brand {
+            float: none;
+            text-transform: uppercase;
+            position: relative;
+            top: 9px;
+        }
+    }
+}
+
+#navbar-collapse {
+    display: none !important;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -166px;
+    height: 100%;
+    width: 165px;
+    z-index: 1030;
+    background: @white;
+    box-shadow: 1px 1px 25px #bbbbbb;
+    transition: right 0.2s ease-out;
+
+    &.out{
+        right: 0;
+    }
+
+    .btn {
+        position: relative;
+        margin-left: -38px;
+        border-radius: 0;
+        display: block !important;
+        height: 41px;
+        background: @red;
+        margin-top: -1px;
+        border: none;
+    }
+}
+
+#wrap {
+    padding-top: 113px;
+
+    > .container-fluid {
+        margin-top: -73px;
+    }
+}

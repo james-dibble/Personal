@@ -100,6 +100,13 @@
             return this._persistence.GetRepository<Blog>().GetMany(b => b.Date.Year == year && b.Date.Month == month);
         }
 
+        public IEnumerable<Blog> GetBlogs(string tag)
+        {
+            var blogs = this._persistence.GetRepository<Blog>().GetMany(b => b.Tags.ToLower().Contains(tag.ToLower()));
+
+            return blogs;
+        }
+
         public Portfolio GetPortfolio(DateTime date, string title)
         {
             if (this._persistence.GetRepository<Portfolio>().Count(b => b.Date.Year == date.Year && b.Date.Month == date.Month && b.Date.Day == date.Day) == 1)
@@ -163,6 +170,22 @@
             var portfolios = this._persistence.GetRepository<Portfolio>().GetAll();
 
             return portfolios;
+        }
+
+        public IEnumerable<Portfolio> GetPortfolios(string tag)
+        {
+            var portfolios = this._persistence.GetRepository<Portfolio>().GetMany(p => p.Tags.ToLower().Contains(tag.ToLower()));
+
+            return portfolios;
+        }
+
+        public IEnumerable<string> GetAllTags<TPost>() where TPost : Post
+        {
+            var blogsWithTags = this._persistence.GetRepository<TPost>().GetMany(b => b.Tags != null);
+
+            var tags = blogsWithTags.SelectMany(b => b.Tags.Split(',')).Select(t => t.Trim());
+
+            return tags;
         }
     }
 }

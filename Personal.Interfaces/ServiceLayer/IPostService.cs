@@ -20,6 +20,8 @@ namespace Personal.ServiceLayer
         IEnumerable<Blog> GetAllBlogs();
 
         IEnumerable<Blog> GetBlogs(int year = 0, int month = 0);
+
+        IEnumerable<Blog> GetBlogs(string tag);
         
         Portfolio GetPortfolio(DateTime date, string title);
 
@@ -32,5 +34,9 @@ namespace Personal.ServiceLayer
         void SavePortfolioImages(Portfolio portfolio, ICollection<Image> images);
 
         IEnumerable<Portfolio> GetAllPortfolios();
+
+        IEnumerable<Portfolio> GetPortfolios(string tag);
+
+        IEnumerable<string> GetAllTags<TPost>() where TPost : Post;
     }
 }

@@ -1,0 +1,10 @@
+﻿@model Personal.DomainModel.Post
+
+@if (this.Model.Tags == null)
+{
+    <span>No Tags</span>
+}
+@foreach (var tag in this.Model.Tags == null ? new string[0] : this.Model.Tags.Split(',').Select(t => t.Trim()))
+{
+    <a href="@this.Url.Action(this.Model is Blog ? "blogarchivetag" : "portfolioarchivetag", "posts", new { tag = tag.ToLower() })"><span class="label label-primary">@tag</span></a>
+}
