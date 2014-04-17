@@ -31,6 +31,8 @@ namespace Personal.ServiceLayer
 
         Portfolio SavePortfolio(Portfolio portfolio);
 
+        void DeleteBlog(int id);
+
         void SavePortfolioImages(Portfolio portfolio, ICollection<Image> images);
 
         IEnumerable<Portfolio> GetAllPortfolios();

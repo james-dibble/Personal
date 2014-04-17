@@ -187,5 +187,10 @@
 
             return tags;
         }
+
+        public void DeleteBlog(int id)
+        {
+            this._persistence.GetRepository<Blog>().Delete(b => b.Id == id);
+        }
     }
 }

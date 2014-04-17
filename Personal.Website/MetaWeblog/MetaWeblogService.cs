@@ -89,7 +89,9 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
 
     public bool DeletePost(string key, string postid, string username, string password, bool publish)
     {
-        throw new System.NotImplementedException();
+        this._postService.DeleteBlog(int.Parse(postid));
+
+        return true;
     }
 
     public object[] GetUsersBlogs(string key, string username, string password)
