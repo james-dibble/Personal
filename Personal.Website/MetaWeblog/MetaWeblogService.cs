@@ -34,7 +34,7 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
     {
         var blog = new Blog
         {
-            Id = int.Parse(post.ID),
+            Id = int.Parse(postid),
             Title = post.Title,
             Date = post.LastModified,
             Tags = string.Join(",", post.Categories),
