@@ -2,13 +2,14 @@
 {
     using System.Web.Mvc;
     using System.Web.Routing;
+    using Personal.Website.Handlers;
 
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+                        
             routes.MapRoute(
                 "Contact",
                 "contact",
@@ -73,7 +74,7 @@
                 "LegacyPortfolio",
                 "portfolio/{id}/{title}",
                 new { controller = "Posts", action = "LegacyPortfolio" });
-
+            
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
