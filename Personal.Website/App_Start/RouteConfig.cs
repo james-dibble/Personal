@@ -9,9 +9,7 @@
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.Add(new Route("metaweblog", new MetaWeblogHandler()));
-                        
+                                                
             routes.MapRoute(
                 "Contact",
                 "contact",
@@ -76,7 +74,9 @@
                 "LegacyPortfolio",
                 "portfolio/{id}/{title}",
                 new { controller = "Posts", action = "LegacyPortfolio" });
-            
+
+            routes.Add(new Route("metaweblog", new MetaWeblogHandler()));
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
