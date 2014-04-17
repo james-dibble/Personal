@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Configuration;
+using System.Linq;
 using System.Web.Mvc;
 using CookComputing.XmlRpc;
 using Personal.DomainModel;
@@ -16,6 +18,8 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
 
     public string AddPost(string blogid, string username, string password, Post post, bool publish)
     {
+        Authenticate(password);
+
         var blog = new Blog
         {
             Title = post.Title,
@@ -32,6 +36,8 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
 
     public bool UpdatePost(string postid, string username, string password, Post post, bool publish)
     {
+        Authenticate(password);
+
         var blog = new Blog
         {
             Id = int.Parse(postid),
@@ -49,6 +55,8 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
 
     public object GetPost(string postid, string username, string password)
     {
+        Authenticate(password);
+
         var blog = this._postService.GetBlog(int.Parse(postid));
 
         return new
@@ -64,11 +72,15 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
 
     public object[] GetCategories(string blogid, string username, string password)
     {
+        Authenticate(password);
+
         return this._postService.GetAllTags<Blog>().Select(t => new { title = t }).ToArray();
     }
 
     public object[] GetRecentPosts(string blogid, string username, string password, int numberOfPosts)
     {
+        Authenticate(password);
+
         var posts = this._postService.GetAllBlogs().Take(numberOfPosts).Select(blog => new
         {
             description = blog.Content,
@@ -89,6 +101,8 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
 
     public bool DeletePost(string key, string postid, string username, string password, bool publish)
     {
+        Authenticate(password);
+
         this._postService.DeleteBlog(int.Parse(postid));
 
         return true;
@@ -96,6 +110,8 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
 
     public object[] GetUsersBlogs(string key, string username, string password)
     {
+        Authenticate(password);
+
         return new[] 
         { 
             new 
@@ -105,5 +121,16 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
                 url = Context.Request.Url.Scheme + "://" + Context.Request.Url.Authority
             }
         };
+    }
+
+    private void Authenticate(string password)
+    {
+        var hashed = password.ComputeHash("iamasalt");
+        var saved = ConfigurationManager.AppSettings["blogPublishPassword"];
+
+        if (string.Equals(password.ComputeHash(), ConfigurationManager.AppSettings["blogPublishPassword"]))
+        {
+            throw new XmlRpcFaultException(0, "Password incorrect");
+        }
     }
 }
