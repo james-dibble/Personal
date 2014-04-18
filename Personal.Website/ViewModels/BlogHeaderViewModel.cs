@@ -14,9 +14,32 @@ namespace Personal.Website.ViewModels
 
     public class BlogHeaderViewModel
     {
+        public const int pageLimit = 10;
+
         public int Year { get; set; }
 
         public int Month { get; set; }
+
+        public int Page { get; set; }
+
+        public bool HasNextPage
+        {
+            get
+            {
+                return 
+                    this.Page > this.Blogs.Count() / pageLimit
+                    ||
+                    this.Page >= this.Blogs.Count() / pageLimit && this.Blogs.Count() % pageLimit == 0;
+            }
+        }
+
+        public bool HasPreviousPage
+        {
+            get
+            {
+                return this.Page <= 1;
+            }
+        }
 
         public bool CanRemove { get; set; }
 

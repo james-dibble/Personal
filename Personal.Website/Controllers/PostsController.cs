@@ -62,20 +62,20 @@
                 });
         }
 
-        public ActionResult BlogArchive(int year, int month)
+        public ActionResult BlogArchive(int year, int month, int page)
         {
             var blogs = this._postService.GetBlogs(year, month).OrderByDescending(b => b.Date);
 
-            var viewModel = new BlogHeaderViewModel { Year = year, Month = month, Blogs = blogs };
+            var viewModel = new BlogHeaderViewModel { Year = year, Month = month, Blogs = blogs, Page = page };
 
             return this.View(viewModel);
         }
 
-        public ActionResult BlogArchiveTag(int year, int month, string tag)
+        public ActionResult BlogArchiveTag(int year, int month, string tag, int page)
         {
             var blogs = this._postService.GetBlogs(tag).OrderByDescending(p => p.Date);
 
-            var viewModel = new BlogHeaderViewModel { Year = year, Month = month, Blogs = blogs };
+            var viewModel = new BlogHeaderViewModel { Year = year, Month = month, Blogs = blogs, Page = page };
 
             return this.View("BlogArchive", viewModel);
         }
