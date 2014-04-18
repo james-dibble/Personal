@@ -14,7 +14,7 @@ namespace Personal.Website.ViewModels
 
     public class BlogHeaderViewModel
     {
-        public const int pageLimit = 3;
+        public const int pageLimit = 10;
 
         public int Year { get; set; }
 
