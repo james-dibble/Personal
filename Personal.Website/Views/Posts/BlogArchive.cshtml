@@ -10,7 +10,7 @@
     <script src="@this.Url.Content("~/asset/script/post.js")"></script>
 }
 
-<div class="col-lg-10 col-md-9 col-sm-9">
+<div class="col-lg-10 col-md-9 col-sm-9" id="affix-target">
     @foreach (var blog in this.Model.Blogs.Skip((this.Model.Page - 1) * Personal.Website.ViewModels.BlogHeaderViewModel.pageLimit).Take(Personal.Website.ViewModels.BlogHeaderViewModel.pageLimit))
     {
         if (count % 2 != 0)
@@ -71,36 +71,35 @@
     {
         this.Write(this.Html.Partial("PageTitle", "No Posts"));
     }
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <ul class="pager">
+            @if (!this.Model.HasNextPage)
+            {
+                <li class="previous">
+                    @if (this.Model.Tag == null)
+                    {
+                        <a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.Month, page = this.Model.Page + 1 })">&larr; Older</a>
+                    }
+                    else
+                    {
+                        <a href="@this.Url.Action("blogarchivetag", "posts", new { year = this.Model.Year, month = this.Model.Month, tag = this.Model.Tag, page = this.Model.Page + 1 })">&larr; Older</a>
+                    }
+                </li>
+            }
+            @if (!this.Model.HasPreviousPage)
+            {
+                <li class="next">
+                    @if (this.Model.Tag == null)
+                    {
+                        <a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.Month, page = this.Model.Page - 1 })">Newer &rarr;</a>
+                    }
+                    else
+                    {
+                        <a href="@this.Url.Action("blogarchivetag", "posts", new { year = this.Model.Year, month = this.Model.Month, tag = this.Model.Tag, page = this.Model.Page - 1 })">Newer &rarr;</a>
+                    }
+                </li>
+            }
+        </ul>
+    </div>
 </div>
-<div class="col-lg-10 col-md-9 col-sm-9">
-    <ul class="pager">
-        @if (!this.Model.HasNextPage)
-        {
-            <li class="previous">
-                @if (this.Model.Tag == null)
-                {
-                    <a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.Month, page = this.Model.Page + 1 })">&larr; Older</a>
-                }
-                else
-                {
-                    <a href="@this.Url.Action("blogarchivetag", "posts", new { year = this.Model.Year, month = this.Model.Month, tag = this.Model.Tag, page = this.Model.Page + 1 })">&larr; Older</a>
-                }
-            </li>
-        }
-        @if (!this.Model.HasPreviousPage)
-        {
-            <li class="next">
-                @if (this.Model.Tag == null)
-                {
-                    <a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.Month, page = this.Model.Page - 1 })">Newer &rarr;</a>
-                }
-                else
-                {
-                    <a href="@this.Url.Action("blogarchivetag", "posts", new { year = this.Model.Year, month = this.Model.Month, tag = this.Model.Tag, page = this.Model.Page - 1 })">Newer &rarr;</a>
-                }
-            </li>
-        }
-    </ul>
-</div>
-
 @this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Year, month = this.Model.Month, canRemove = true })

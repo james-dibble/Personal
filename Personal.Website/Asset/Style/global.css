@@ -6,6 +6,7 @@ body {
   height: 100%;
   font-family: 'Arimo', sans-serif !important;
   background: #f7f7f7;
+  position: relative;
 }
 #wrap {
   min-height: 100%;
@@ -110,16 +111,19 @@ footer .scroll-arrow:hover i:last-child {
 #wrap > .container-fluid {
   margin-top: -73px;
 }
-div[data-spy="affix"] {
+div[data-spy="affix-maybe"] {
   right: 0;
   background: #fafafa;
   box-shadow: 1px 1px 25px #bbbbbb;
 }
-div[data-spy="affix"].affix-top {
-  position: absolute;
+div[data-spy="affix-maybe"].affix-top {
+  position: relative;
 }
-div[data-spy="affix"].affix-bottom {
-  position: fixed;
+div[data-spy="affix-maybe"].affix-bottom {
+  position: relative;
+}
+div[data-spy="affix-maybe"].dont-affix {
+  position: relative !important;
 }
 .btn.btn-default {
   background-image: linear-gradient(#fafafa, #ffffff 6%);

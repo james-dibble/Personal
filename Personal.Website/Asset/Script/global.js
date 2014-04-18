@@ -27,7 +27,25 @@ $(function () {
 
         target.addClass('out');
     });
-    
+
+    var affix = $('*[data-spy="affix-maybe"]');
+
+    if (affix !== null) {
+        var contentHeight = $($(affix).data('affix-target')).height();
+        var sidebarHeight = affix.height();
+
+        if (contentHeight >= sidebarHeight) {
+            $(affix).affix({
+                offset: {
+                    top: 40,
+                    bottom: 50
+                }
+            });
+        } else {
+            $(affix).addClass('dont-affix');
+        }
+    }    
+
     var request = "/" + window.location.pathname.split("/", 2)[1];
     $(['ul.nav a[href ^="', request, '"]'].join('')).first().parent().addClass('active');
 });

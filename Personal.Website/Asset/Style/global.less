@@ -9,6 +9,7 @@ body {
     height: 100%;
     font-family: 'Arimo', sans-serif !important;
     background: @grey;
+    position: relative;
 }
 
 #wrap {
@@ -88,17 +89,21 @@ footer {
 
 @import "navbar.less";
 
-div[data-spy="affix"] {
+div[data-spy="affix-maybe"] {
     right: 0;
     background: @white;
     box-shadow: 1px 1px 25px #bbbbbb;
 
     &.affix-top {
-        position: absolute;
+        position: relative;
     }
 
-    &.affix-bottom{
-        position: fixed;
+    &.affix-bottom {
+        position: relative;
+    }
+
+    &.dont-affix {
+        position: relative !important;
     }
 }
 
