@@ -115,6 +115,9 @@ div[data-spy="affix"] {
   background: #fafafa;
   box-shadow: 1px 1px 25px #bbbbbb;
 }
+div[data-spy="affix"].affix-top {
+  position: absolute;
+}
 .btn.btn-default {
   background-image: linear-gradient(#fafafa, #ffffff 6%);
   border: 1px solid #f7f7f7;

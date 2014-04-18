@@ -68,6 +68,6 @@
         this.Write(this.Html.Partial("PageTitle", "No Posts"));
     }
 </div>
-<div data-spy="affix" data-offset-top="40" data-offset-bottom="50" class="hidden-xs affix-top col-lg-2 col-md-3 col-sm-3">
+<div data-spy="affix" data-offset-top="0" data-offset-bottom="50" class="hidden-xs affix-top col-lg-2 col-md-3 col-sm-3">
     @this.Html.Action("Tags", "Posts", new { postType = typeof(Portfolio) })
 </div>
