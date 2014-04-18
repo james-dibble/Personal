@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Configuration;
 using System.Linq;
-using System.Web.Mvc;
 using CookComputing.XmlRpc;
 using Personal.DomainModel;
 using Personal.Persistence;
@@ -10,7 +9,7 @@ using Personal.ServiceLayer;
 public class MetaWeblogService : XmlRpcService, IMetaWeblog
 {
     private readonly IPostService _postService;
-    
+
     public MetaWeblogService()
     {
         this._postService = new PostService(new UnitOfWork(new PersonalPersistenceContext()));
@@ -79,7 +78,7 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
     {
         Authenticate(password);
 
-        var posts = this._postService.GetAllBlogs().Take(numberOfPosts).Select(blog => new
+        var posts = this._postService.GetAllBlogs().OrderByDescending(b => b.Date).Take(numberOfPosts).Select(blog => new
         {
             description = blog.Content,
             title = blog.Title,

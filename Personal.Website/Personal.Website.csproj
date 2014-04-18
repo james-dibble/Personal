@@ -40,10 +40,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CookComputing.XmlRpcServerV2">
+    <Reference Include="CookComputing.XmlRpcServerV2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a7d6e17aa302004d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\xmlrpcnet-server.3.0.0.266\lib\net20\CookComputing.XmlRpcServerV2.dll</HintPath>
     </Reference>
-    <Reference Include="CookComputing.XmlRpcV2">
+    <Reference Include="CookComputing.XmlRpcV2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a7d6e17aa302004d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\xmlrpcnet.3.0.0.266\lib\net20\CookComputing.XmlRpcV2.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -56,6 +58,9 @@
     </Reference>
     <Reference Include="JamesDibble.ApplicationFramework.Configuration">
       <HintPath>..\packages\JamesDibble.ApplicationFramework.Configuration.1.0.6.0\lib\net40\JamesDibble.ApplicationFramework.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="JamesDibble.ApplicationFramework.Web.MetaWeblog">
+      <HintPath>..\packages\JamesDibble.ApplicationFramework.Web.MetaWeblog.1.0.20.0\lib\net45\JamesDibble.ApplicationFramework.Web.MetaWeblog.dll</HintPath>
     </Reference>
     <Reference Include="JamesDibble.ApplicationFramework.Web.Mvc">
       <HintPath>..\packages\JamesDibble.ApplicationFramework.Web.Mvc.1.0.6.0\lib\net45\JamesDibble.ApplicationFramework.Web.Mvc.dll</HintPath>
@@ -162,6 +167,7 @@
     <Content Include="sitemap.xml" />
     <Content Include="Unity.Mvc4.README.txt" />
     <Content Include="Web.config" />
+    <Content Include="wlwmanifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Bootstrapper.cs" />
@@ -175,10 +181,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Handlers\MetaWeblogHandler.cs" />
-    <Compile Include="MetaWeblog\IMetaWeblog.cs" />
-    <Compile Include="MetaWeblog\MediaObject.cs" />
-    <Compile Include="MetaWeblog\MetaWeblogService.cs" />
-    <Compile Include="MetaWeblog\Post.cs" />
+    <Compile Include="Handlers\MetaWeblogService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BlogHeaderViewModel.cs" />
     <Compile Include="ViewModels\ContactViewModel.cs" />
