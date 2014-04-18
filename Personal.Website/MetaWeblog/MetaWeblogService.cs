@@ -38,15 +38,13 @@ public class MetaWeblogService : XmlRpcService, IMetaWeblog
     {
         Authenticate(password);
 
-        var blog = new Blog
-        {
-            Id = int.Parse(postid),
-            Title = post.Title,
-            Date = post.LastModified,
-            Tags = string.Join(",", post.Categories),
-            Content = post.Content,
-            Abstract = post.Slug
-        };
+        var blog = this._postService.GetBlog(int.Parse(postid));
+
+        blog.Title = post.Title;
+        blog.Date = post.LastModified == DateTime.MinValue ? post.PubDate : post.LastModified;
+        blog.Tags = string.Join(",", post.Categories);
+        blog.Content = post.Content;
+        blog.Abstract = post.Slug;
 
         blog = this._postService.SaveBlog(blog);
 
