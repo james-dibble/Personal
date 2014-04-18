@@ -1,5 +1,5 @@
 ﻿@model Personal.Website.ViewModels.BlogHeaderViewModel
-@{    
+@{
     this.Title = string.Concat("Blog", this.Model.GetDateString());
     this.Description = string.Concat("Ramblings of a .Net Web Developer; the blog of James Dibble.", this.Model.GetDateString());
     var count = 1;
@@ -74,13 +74,34 @@
 </div>
 <div class="col-lg-10 col-md-9 col-sm-9">
     <ul class="pager">
-        <li class="previous@(this.Model.HasNextPage ? " disabled" : string.Empty)">
-            <a href="@this.Url.Action("blogarchive", "posts", new { page = this.Model.Page + 1 })">&larr; Older</a>
-        </li>
-        <li class="next@(this.Model.HasPreviousPage ? " disabled" : string.Empty)">
-            <a href="@this.Url.Action("blogarchive", "posts", new { page = this.Model.Page - 1 })">Newer &rarr;</a>
-        </li>
+        @if (!this.Model.HasNextPage)
+        {
+            <li class="previous">
+                @if (this.Model.Tag == null)
+                {
+                    <a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.Month, page = this.Model.Page + 1 })">&larr; Older</a>
+                }
+                else
+                {
+                    <a href="@this.Url.Action("blogarchivetag", "posts", new { year = this.Model.Year, month = this.Model.Month, tag = this.Model.Tag, page = this.Model.Page + 1 })">&larr; Older</a>
+                }
+            </li>
+        }
+        @if (!this.Model.HasPreviousPage)
+        {
+            <li class="next">
+                @if (this.Model.Tag == null)
+                {
+                    <a href="@this.Url.Action("blogarchive", "posts", new { year = this.Model.Year, month = this.Model.Month, page = this.Model.Page - 1 })">Newer &rarr;</a>
+                }
+                else
+                {
+                    <a href="@this.Url.Action("blogarchivetag", "posts", new { year = this.Model.Year, month = this.Model.Month, tag = this.Model.Tag, page = this.Model.Page - 1 })">Newer &rarr;</a>
+                }
+            </li>
+        }
     </ul>
+
 </div>
 
 @this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Year, month = this.Model.Month, canRemove = true })

@@ -20,6 +20,8 @@ namespace Personal.Website.ViewModels
 
         public int Month { get; set; }
 
+        public string Tag { get; set; }
+
         public int Page { get; set; }
 
         public bool HasNextPage

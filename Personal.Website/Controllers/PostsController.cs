@@ -73,9 +73,18 @@
 
         public ActionResult BlogArchiveTag(int year, int month, string tag, int page)
         {
-            var blogs = this._postService.GetBlogs(tag).OrderByDescending(p => p.Date);
+            IEnumerable<Blog> blogs = null;
 
-            var viewModel = new BlogHeaderViewModel { Year = year, Month = month, Blogs = blogs, Page = page };
+            if(string.IsNullOrEmpty(tag))
+            {
+                blogs = this._postService.GetBlogs(year, month).OrderByDescending(b => b.Date);
+            }
+            else
+            {
+                blogs = this._postService.GetBlogs(tag).OrderByDescending(p => p.Date);
+            }
+
+            var viewModel = new BlogHeaderViewModel { Year = year, Month = month, Blogs = blogs, Page = page, Tag = tag };
 
             return this.View("BlogArchive", viewModel);
         }

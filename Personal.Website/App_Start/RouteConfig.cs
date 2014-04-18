@@ -36,8 +36,19 @@
                 new { controller = "Posts", action = "BlogArchiveTag", year = 0, month = 0, page = 1 });
 
             routes.MapRoute(
+                "BlogArchiveTagPage",
+                "blog/tag/{tag}/page/{page}",
+                new { controller = "Posts", action = "BlogArchiveTag", year = 0, month = 0, page = 1 });
+
+            routes.MapRoute(
                 "BlogArchiveYear",
                 "blog/{year}",
+                new { controller = "Posts", action = "BlogArchive", month = 0, page = 1 },
+                new { year = @"^\d{4}$" });
+
+            routes.MapRoute(
+                "BlogArchiveYearPage",
+                "blog/{year}/page/{page}",
                 new { controller = "Posts", action = "BlogArchive", month = 0, page = 1 },
                 new { year = @"^\d{4}$" });
 
@@ -48,8 +59,20 @@
                 new { month = @"^\d{1,2}$" });
 
             routes.MapRoute(
+                "BlogArchiveMonthPage",
+                "blog/{month}/page/{page}",
+                new { controller = "Posts", action = "BlogArchive", year = 0, page = 1 },
+                new { month = @"^\d{1,2}$" });
+
+            routes.MapRoute(
                 "BlogArchiveYearMonth",
                 "blog/{year}/{month}",
+                new { controller = "Posts", action = "BlogArchive", page = 1 },
+                new { year = @"^\d{4}$", month = @"^\d{1,2}$" });
+
+            routes.MapRoute(
+                "BlogArchiveYearMonthPage",
+                "blog/{year}/{month}/page/{page}",
                 new { controller = "Posts", action = "BlogArchive", page = 1 },
                 new { year = @"^\d{4}$", month = @"^\d{1,2}$" });
             
