@@ -273,6 +273,10 @@ div[data-spy="affix"] {
   position: relative;
   margin: 20px auto;
 }
+article p {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
 @media (max-width: 1200px) {
   .summary {
     text-align: center !important;
