@@ -43,6 +43,20 @@
             return blog;
         }
 
+        public Blog GetNextBlog(Blog blog)
+        {
+            var nextBlog = this._persistence.GetRepository<Blog>().GetMany(b => b.Date > blog.Date).OrderBy(b => b.Date).FirstOrDefault();
+
+            return nextBlog;
+        }
+
+        public Blog GetPreviousBlog(Blog blog)
+        {
+            var previousBlog = this._persistence.GetRepository<Blog>().GetMany(b => b.Date < blog.Date).OrderByDescending(b => b.Date).FirstOrDefault();
+
+            return previousBlog;
+        }
+
         public Blog GetBlog(int id)
         {
             var blog = this._persistence.GetRepository<Blog>().Single(b => b.Id == id);

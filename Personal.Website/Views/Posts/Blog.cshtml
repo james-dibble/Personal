@@ -1,35 +1,60 @@
-﻿@model Blog
+﻿@model Personal.Website.ViewModels.BlogViewModel
 @{
-    this.Title = string.Join(" - ", "Blog", this.Model.Title);
-    this.Description = this.Model.Abstract;
+    this.Title = string.Join(" - ", "Blog", this.Model.Blog.Title);
+    this.Description = this.Model.Blog.Abstract;
 }
 @section Meta
 {
-    <link rel="canonical" href="http://www.jdibble.co.uk@(this.Url.Action("blog", "posts", new { year = this.Model.Date.Year, month = this.Model.Date.Month, day = this.Model.Date.Day, title = this.Model.Title.ToLowerInvariant().Replace(' ', '-') }))" />
+    <link rel="canonical" href="http://www.jdibble.co.uk@(this.Url.Action("blog", "posts", new { year = this.Model.Blog.Date.Year, month = this.Model.Blog.Date.Month, day = this.Model.Blog.Date.Day, title = this.Model.Blog.Title.ToLowerInvariant().Replace(' ', '-') }))" />
+    @if (this.Model.NextBlog != null)
+    {
+        <link rel="next" href="@this.Url.Action("blog", "posts", new { year = this.Model.NextBlog.Date.Year, month = this.Model.NextBlog.Date.Month, day = this.Model.NextBlog.Date.Day, title = this.Model.NextBlog.Title.ToLowerInvariant().Replace(' ', '-') })" />
+    }
+    @if (this.Model.PreviousBlog != null)
+    {
+       <link rel="prev" href="@this.Url.Action("blog", "posts", new { year = this.Model.PreviousBlog.Date.Year, month = this.Model.PreviousBlog.Date.Month, day = this.Model.PreviousBlog.Date.Day, title = this.Model.PreviousBlog.Title.ToLowerInvariant().Replace(' ', '-') })" />
+    }
 }
 @section Script
 {
     <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
 }
-<article class="post" data-id="@this.Model.Date.ToFileTimeUtc()" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+<article class="post" data-id="@this.Model.Blog.Date.ToFileTimeUtc()" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
     <div class="col-lg-10 col-md-10 col-sm-9">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="page-header">
-                <h1 itemprop="headline name"><a href="@this.Url.Action("blog", "posts", new { year = this.Model.Date.Year, month = this.Model.Date.Month, day = this.Model.Date.Day, title = this.Model.Title.ToLowerInvariant().Replace(' ', '-') })" itemprop="url">@this.Model.Title</a></h1>
+                <h1 itemprop="headline name"><a href="@this.Url.Action("blog", "posts", new { year = this.Model.Blog.Date.Year, month = this.Model.Blog.Date.Month, day = this.Model.Blog.Date.Day, title = this.Model.Blog.Title.ToLowerInvariant().Replace(' ', '-') })" itemprop="url">@this.Model.Blog.Title</a></h1>
             </div>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <p class="lead">@this.Model.Abstract</p>
+            <p class="lead">@this.Model.Blog.Abstract</p>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <p>
-                <span itemprop="datePublished">@this.Model.Date.ToString("dddd d MMMM yyyy")</span>
+                <span itemprop="datePublished">@this.Model.Blog.Date.ToString("dddd d MMMM yyyy")</span>
                 &nbsp;<span class="fa fa-tag"></span>
-                @this.Html.Partial("TagLinks", this.Model)
+                @this.Html.Partial("TagLinks", this.Model.Blog)
             </p>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" itemprop="articleBody">
-            @this.Html.Raw(this.Model.Content)
+            @this.Html.Raw(this.Model.Blog.Content)
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <ul class="pager">
+                @if (this.Model.NextBlog != null)
+                {
+                    <li class="previous">
+                        <a href="@this.Url.Action("blog", "posts", new { year = this.Model.NextBlog.Date.Year, month = this.Model.NextBlog.Date.Month, day = this.Model.NextBlog.Date.Day, title = this.Model.NextBlog.Title.ToLowerInvariant().Replace(' ', '-') })" itemprop="url">&larr;&nbsp;@this.Model.NextBlog.Title</a>
+                    </li>
+                }
+                @if (this.Model.PreviousBlog != null)
+                {
+                    <li class="next">
+                        <a href="@this.Url.Action("blog", "posts", new { year = this.Model.PreviousBlog.Date.Year, month = this.Model.PreviousBlog.Date.Month, day = this.Model.PreviousBlog.Date.Day, title = this.Model.PreviousBlog.Title.ToLowerInvariant().Replace(' ', '-') })" itemprop="url">@this.Model.PreviousBlog.Title &nbsp;&rarr;</a>
+                    </li>
+                }
+            </ul>
+
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div id="disqus_thread"></div>
@@ -38,5 +63,5 @@
         </div>
     </div>
 
-    @this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Date.Year, month = this.Model.Date.Month, canRemove = false })
+    @this.Html.Action("BlogHeader", "Posts", new { year = this.Model.Blog.Date.Year, month = this.Model.Blog.Date.Month, canRemove = false })
 </article>

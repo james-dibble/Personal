@@ -107,7 +107,14 @@
                 return this.RedirectToAction("notfound", "error");
             }
 
-            return this.View(blog);
+            var viewModel = new BlogViewModel
+            {
+                Blog = blog,
+                NextBlog = this._postService.GetNextBlog(blog),
+                PreviousBlog = this._postService.GetPreviousBlog(blog)
+            };
+
+            return this.View(viewModel);
         }
 
         public ActionResult WriteBlog(int id = 0)

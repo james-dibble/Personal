@@ -17,6 +17,10 @@ namespace Personal.ServiceLayer
 
         Blog SaveBlog(Blog blog);
 
+        Blog GetNextBlog(Blog blog);
+
+        Blog GetPreviousBlog(Blog blog);
+
         IEnumerable<Blog> GetAllBlogs();
 
         IEnumerable<Blog> GetBlogs(int year = 0, int month = 0);
