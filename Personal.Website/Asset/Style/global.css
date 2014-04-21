@@ -216,6 +216,9 @@ div[data-spy="affix-maybe"].dont-affix {
   overflow: hidden;
   margin-bottom: 0;
 }
+.jumbotron:first-child {
+  margin-top: -46px;
+}
 .jumbotron .container-fluid {
   display: table-cell;
   vertical-align: middle;
@@ -230,7 +233,7 @@ div[data-spy="affix-maybe"].dont-affix {
   text-align: center;
   font-size: 30px;
   position: absolute;
-  bottom: 160px;
+  bottom: 65px;
   right: 20px;
   cursor: pointer;
   box-shadow: 0 0 10px 3px #bbb;
