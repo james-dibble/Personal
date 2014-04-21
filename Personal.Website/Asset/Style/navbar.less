@@ -10,6 +10,8 @@
             text-transform: uppercase;
             position: relative;
             top: 9px;
+            font-size: 22px;
+            line-height: 26px;
         }
     }
 }
@@ -26,27 +28,43 @@
     width: 165px;
     z-index: 1030;
     background: @white;
-    box-shadow: 1px 1px 25px #bbbbbb;
+    box-shadow: 1px 1px 25px #666;
     transition: right 0.2s ease-out;
 
-    &.out{
+    &.out {
         right: 0;
     }
 
     .btn {
         position: relative;
-        margin-left: -38px;
+        margin-left: -36px;
         border-radius: 0;
         display: block !important;
-        height: 41px;
+        height: 47px;
         background: @red;
         margin-top: -1px;
         border: none;
+        color: @white;
+        box-shadow: 1px -3px 6px 0 #666;
+        z-index: 999;
+    }
+
+    .nav {
+        margin-top: -47px;
+
+        li {
+            height: 47px;
+
+            a {
+                height: 47px;
+                padding: 14px 15px;
+            }
+        }
     }
 }
 
 #wrap {
-    padding-top: 113px;
+    padding-top: 120px;
 
     > .container-fluid {
         margin-top: -73px;

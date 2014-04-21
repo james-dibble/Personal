@@ -4,7 +4,6 @@
 html,
 body {
   height: 100%;
-  font-family: 'Arimo', sans-serif !important;
   background: #f7f7f7;
   position: relative;
 }
@@ -25,7 +24,7 @@ footer .scroll-arrow {
   height: 32px;
   width: 32px;
   border-radius: 1000px;
-  background: #d9230f;
+  background: #158cba;
   color: #fafafa;
   text-align: center;
   font-size: 25px;
@@ -77,6 +76,8 @@ footer .scroll-arrow:hover i:last-child {
   text-transform: uppercase;
   position: relative;
   top: 9px;
+  font-size: 22px;
+  line-height: 26px;
 }
 #navbar-collapse {
   display: none !important;
@@ -89,7 +90,7 @@ footer .scroll-arrow:hover i:last-child {
   width: 165px;
   z-index: 1030;
   background: #fafafa;
-  box-shadow: 1px 1px 25px #bbbbbb;
+  box-shadow: 1px 1px 25px #666;
   transition: right 0.2s ease-out;
 }
 #sidebar.out {
@@ -97,16 +98,29 @@ footer .scroll-arrow:hover i:last-child {
 }
 #sidebar .btn {
   position: relative;
-  margin-left: -38px;
+  margin-left: -36px;
   border-radius: 0;
   display: block !important;
-  height: 41px;
-  background: #d9230f;
+  height: 47px;
+  background: #158cba;
   margin-top: -1px;
   border: none;
+  color: #fafafa;
+  box-shadow: 1px -3px 6px 0 #666666;
+  z-index: 999;
+}
+#sidebar .nav {
+  margin-top: -47px;
+}
+#sidebar .nav li {
+  height: 47px;
+}
+#sidebar .nav li a {
+  height: 47px;
+  padding: 14px 15px;
 }
 #wrap {
-  padding-top: 113px;
+  padding-top: 120px;
 }
 #wrap > .container-fluid {
   margin-top: -73px;
@@ -131,8 +145,9 @@ div[data-spy="affix-maybe"].dont-affix {
 }
 .summary {
   padding: 20px;
-  background: #fafafa;
-  box-shadow: 1px 1px 25px #bbbbbb;
+  background: #ffffff;
+  box-shadow: 1px 0 5px -2px #666666;
+  margin-top: 15px;
 }
 .summary .summary-content-wrap {
   display: table;
@@ -175,7 +190,7 @@ div[data-spy="affix-maybe"].dont-affix {
   display: table-cell;
   vertical-align: middle;
   margin-bottom: 10px;
-  background: #007fff;
+  background: #158cba;
   border-radius: 1000px;
   height: 100%;
   width: 100%;
@@ -210,7 +225,7 @@ div[data-spy="affix-maybe"].dont-affix {
   height: 40px;
   width: 40px;
   border-radius: 1000px;
-  background: #d9230f;
+  background: #158cba;
   color: #fafafa;
   text-align: center;
   font-size: 30px;
@@ -249,10 +264,10 @@ div[data-spy="affix-maybe"].dont-affix {
 }
 .jumbotron h2 {
   font-size: 63px;
-  color: #d9230f;
+  color: #158cba;
 }
 .jumbotron.primary {
-  background: #d9230f;
+  background: #158cba;
   color: #fafafa;
 }
 .jumbotron.primary h2 {
@@ -260,20 +275,20 @@ div[data-spy="affix-maybe"].dont-affix {
 }
 .jumbotron.primary .scroll-arrow {
   background: #fafafa;
-  color: #d9230f;
+  color: #158cba;
   box-shadow: 0 0 3px 1px #bbb;
 }
 .jumbotron.primary a {
   color: #fafafa;
 }
 .jumbotron.primary a.btn {
-  color: #d9230f;
+  color: #158cba;
 }
 .jumbotron.primary a:hover {
-  color: #7a1408;
+  color: #0b475e;
 }
 .jumbotron.primary a:hover i {
-  color: #7a1408;
+  color: #0b475e;
 }
 .jumbotron.primary a i {
   color: #fafafa;
