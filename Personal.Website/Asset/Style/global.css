@@ -222,7 +222,7 @@ div[data-spy="affix-maybe"].dont-affix {
 .jumbotron .container-fluid {
   display: table-cell;
   vertical-align: middle;
-  padding-top: 60px;
+  padding-top: 90px;
 }
 .jumbotron .scroll-arrow {
   height: 40px;

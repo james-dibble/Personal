@@ -42,22 +42,22 @@ $(function () {
         }
     });
 
-    $('html').swipe({
-        swipeRight: function () {
-            var target = $($('*[data-toggle="collapse-width"]').data('target'));
+    //$('#wrap').swipe({
+    //    swipeRight: function () {
+    //        var target = $($('*[data-toggle="collapse-width"]').data('target'));
 
-            if (!target.hasClass('out')) {
-                target.addClass('out');
-            }
-        },
-        swipeLeft: function () {
-            var target = $($('*[data-toggle="collapse-width"]').data('target'));
+    //        if (!target.hasClass('out')) {
+    //            target.addClass('out');
+    //        }
+    //    },
+    //    swipeLeft: function () {
+    //        var target = $($('*[data-toggle="collapse-width"]').data('target'));
 
-            if (target.hasClass('out')) {
-                target.removeClass('out');
-            }
-        }
-    });
+    //        if (target.hasClass('out')) {
+    //            target.removeClass('out');
+    //        }
+    //    }
+    //});
 
     var affix = $('*[data-spy="affix-maybe"]');
 
