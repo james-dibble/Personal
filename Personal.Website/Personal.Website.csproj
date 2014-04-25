@@ -222,7 +222,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Asset\Script\global.min.js.map">
-      <DependentUpon>global.js</DependentUpon>
+      <DependentUpon>global.min.js</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -21,7 +21,9 @@ $(function () {
         $('.jumbotron').css('min-height', $(window).height());
     }
 
-    $('*[data-toggle="collapse-width"]').click(function () {
+    $('*[data-toggle="collapse-width"]').click(function (event) {
+        event.stopPropagation();
+
         var target = $($(this).data('target'));
 
         if (target.hasClass('out')) {
@@ -30,6 +32,15 @@ $(function () {
         }
 
         target.addClass('out');
+    });
+
+    $('html').click(function () {
+        var target = $($('*[data-toggle="collapse-width"]').data('target'));
+
+        if (target.hasClass('out')) {
+            target.removeClass('out');
+            return;
+        }
     });
 
     var affix = $('*[data-spy="affix-maybe"]');
