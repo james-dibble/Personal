@@ -146,6 +146,10 @@
     <Content Include="Asset\Script\global.min.js">
       <DependentUpon>global.js</DependentUpon>
     </Content>
+    <Content Include="Asset\Script\post.js" />
+    <Content Include="Asset\Script\post.min.js">
+      <DependentUpon>post.js</DependentUpon>
+    </Content>
     <Content Include="Asset\Script\summernote.min.js" />
     <Content Include="Asset\Style\global.css">
       <DependentUpon>global.less</DependentUpon>
@@ -223,6 +227,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Asset\Script\global.min.js.map">
       <DependentUpon>global.min.js</DependentUpon>
+    </Content>
+    <Content Include="Asset\Script\post.min.js.map">
+      <DependentUpon>post.min.js</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

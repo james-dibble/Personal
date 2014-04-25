@@ -1,11 +1,11 @@
 ﻿@model Personal.Website.ViewModels.TagViewModel
 <br />
 <p><span class="fa fa-tag"></span>&nbsp;Tags</p>
-<ul class="nav nav-pills nav-stacked">
+<ul class="nav nav-pills nav-stacked" id="tags">
     @foreach (var tag in this.Model.Tags.OrderByDescending(tag => tag.Value))
     {
         <li>
-            <a href="@this.Url.Action(this.Model.PostType == typeof(Blog) ? "blogarchivetag" : "portfolioarchivetag", "posts", new { tag = tag.Key.Trim().ToLower() })">
+            <a href="@this.Url.Action(this.Model.PostType == typeof(Blog) ? "blogarchivetag" : "portfolioarchivetag", "posts", new { tag = tag.Key.Trim().ToLower() })" data-tag="@tag.Key.Trim().ToLower()">
                 <span class="badge pull-right">@tag.Value</span>
                 @tag.Key
             </a>
