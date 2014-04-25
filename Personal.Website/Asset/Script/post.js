@@ -24,11 +24,15 @@
     }
 
     if ($('#post-tags')) {
-        var tags = $('#post-tags').val().split(",");
+        var tags = $('#post-tags').val();
+        
+        if (tags !== undefined) {
+            tags = tags.split(",");
 
-        $(tags).each(function (index, tag) {
-            $(['#tags li a[data-tag="', tag.trim(), '"]'].join('')).parent().addClass("active");
-        });
+            $(tags).each(function (index, tag) {
+                $(['#tags li a[data-tag="', tag.trim(), '"]'].join('')).parent().addClass("active");
+            });
+        }
     }
 
     $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
