@@ -212,7 +212,6 @@ div[data-spy="affix-maybe"].dont-affix {
   height: 100vh;
   display: table;
   width: 100%;
-  padding-top: 0;
   overflow: hidden;
   margin-bottom: 0;
 }
@@ -321,7 +320,6 @@ article p {
 @media (max-width: 480px) {
   .jumbotron {
     display: block;
-    padding-top: 40px;
     height: auto;
   }
   .jumbotron h1 {
