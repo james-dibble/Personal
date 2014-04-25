@@ -12,11 +12,12 @@
     }
     @if (this.Model.PreviousBlog != null)
     {
-       <link rel="prev" href="@this.Url.Action("blog", "posts", new { year = this.Model.PreviousBlog.Date.Year, month = this.Model.PreviousBlog.Date.Month, day = this.Model.PreviousBlog.Date.Day, title = this.Model.PreviousBlog.Title.ToLowerInvariant().Replace(' ', '-') })" />
+        <link rel="prev" href="@this.Url.Action("blog", "posts", new { year = this.Model.PreviousBlog.Date.Year, month = this.Model.PreviousBlog.Date.Month, day = this.Model.PreviousBlog.Date.Day, title = this.Model.PreviousBlog.Title.ToLowerInvariant().Replace(' ', '-') })" />
     }
 }
 @section Script
 {
+    <script src="//asset.jdibble.co.uk/script/imageLoader.min.js"></script>
     <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
 }
 <article class="post" data-id="@this.Model.Blog.Date.ToFileTimeUtc()" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
