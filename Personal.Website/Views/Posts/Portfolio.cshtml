@@ -15,7 +15,8 @@
     <script src="//asset.jdibble.co.uk/script/imageLoader.min.js"></script>
     <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
 }
-<div id="affix-target">
+<article id="affix-target">
+    <input type="hidden" value="@(this.Model.Tags == null ? string.Empty : this.Model.Tags)" id="post-tags" />
     <div class="col-lg-2 col-md-3 col-sm-3">
         @foreach (var image in this.Model.Images)
         {
@@ -46,7 +47,7 @@
             @this.Html.Raw(this.Model.Content)
         </div>
     </div>
-</div>
+</article>
 <div data-spy="affix-maybe" data-affix-target="#affix-target" class="hidden-xs affix-top col-lg-2 col-md-2 col-sm-2">
     @this.Html.Action("Tags", "Posts", new { postType = typeof(Portfolio) })
 </div>

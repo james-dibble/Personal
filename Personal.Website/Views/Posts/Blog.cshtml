@@ -20,6 +20,7 @@
     <script src="@this.Url.Content("~/asset/script/post.min.js")"></script>
 }
 <article class="post" data-id="@this.Model.Blog.Date.ToFileTimeUtc()" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+    <input type="hidden" value="@(this.Model.Blog.Tags == null ? string.Empty : this.Model.Blog.Tags)" id="post-tags" />
     <div class="col-lg-10 col-md-10 col-sm-9" id="affix-target">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="page-header">

@@ -18,9 +18,17 @@
     }
 
     if (window.location.pathname.match('^/(portfolio|blog)/tag/')) {
-        var tag = window.location.pathname.split("/", 3)[2];
-
+        var tag = window.location.pathname.split("/", 4)[3];
+        
         $(['#tags li a[data-tag="', tag, '"]'].join('')).parent().addClass("active");
+    }
+
+    if ($('#post-tags')) {
+        var tags = $('#post-tags').val().split(",");
+
+        $(tags).each(function (index, tag) {
+            $(['#tags li a[data-tag="', tag.trim(), '"]'].join('')).parent().addClass("active");
+        });
     }
 
     $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
