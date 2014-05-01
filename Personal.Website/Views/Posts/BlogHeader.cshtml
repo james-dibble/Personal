@@ -1,6 +1,9 @@
 ﻿@model Personal.Website.ViewModels.BlogHeaderViewModel
 <div data-spy="affix-maybe" data-affix-target="#affix-target" class="hidden-xs affix-top col-lg-2 col-md-3 col-sm-3">
     <br />
+    <p>
+        <a href="@this.Url.Action("blogrssfeed", "posts")"><i class="fa fa-rss"></i>&nbsp;RSS Feed</a>
+    </p>
     <p>Year</p>
     <ul class="nav nav-pills blog-header-year">
         @foreach (var year in this.Model.Blogs.Select(b => b.Date.Year).Distinct().OrderBy(year => year))

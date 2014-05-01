@@ -122,7 +122,7 @@ namespace Personal.Website.Controllers
 
             var feed = new SyndicationFeed(
                 "James Dibble - Blog",
-                "The Ramblings of a .Net Nerd",
+                "Ramblings of a .Net Web Developer; the blog of James Dibble.",
                 new Uri("http://www.jdibble.co.uk/blog/rss"),
                 items)
             {
