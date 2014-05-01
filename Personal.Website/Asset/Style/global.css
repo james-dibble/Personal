@@ -334,5 +334,11 @@ article p {
   .jumbotron .container-fluid {
     display: block;
   }
+  .jumbotron .scroll-arrow {
+    position: relative;
+    margin: auto auto;
+    bottom: auto;
+    right: auto;
+  }
 }
 /*# sourceMappingURL=global.css.map */
