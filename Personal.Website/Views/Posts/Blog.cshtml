@@ -5,6 +5,8 @@
 }
 @section Meta
 {
+    <link rel="alternate" type="application/rss+xml" title="James Dibble - Blog" href="http://www.jdibble.co.uk/blog/rss" />
+    <link rel="alternate" type="application/atom+xml" title="James Dibble - Blog" href="http://www.jdibble.co.uk/blog/atom">    
     <link rel="canonical" href="http://www.jdibble.co.uk@(this.Url.Action("blog", "posts", new { year = this.Model.Blog.Date.Year, month = this.Model.Blog.Date.Month, day = this.Model.Blog.Date.Day, title = this.Model.Blog.Title.ToLowerInvariant().Replace(' ', '-') }))" />
     @if (this.Model.NextBlog != null)
     {

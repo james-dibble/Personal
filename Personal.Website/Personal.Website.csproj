@@ -65,6 +65,10 @@
     <Reference Include="JamesDibble.ApplicationFramework.Web.Mvc">
       <HintPath>..\packages\JamesDibble.ApplicationFramework.Web.Mvc.1.0.6.0\lib\net45\JamesDibble.ApplicationFramework.Web.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="JamesDibble.ApplicationFramework.Web.Rss, Version=1.1.0.37, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\JamesDibble.ApplicationFramework.Web.Rss.1.1.0.37\lib\net45\JamesDibble.ApplicationFramework.Web.Rss.dll</HintPath>
+    </Reference>
     <Reference Include="JamesDibble.Extensions.System">
       <HintPath>..\packages\JamesDibble.Extensions.System.1.0.1\lib\JamesDibble.Extensions.System.dll</HintPath>
     </Reference>
@@ -92,6 +96,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />

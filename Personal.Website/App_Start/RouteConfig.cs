@@ -87,6 +87,16 @@
                  new { controller = "Posts", action = "PortfolioArchiveTag" });
 
             routes.MapRoute(
+                "BlogRssFeed",
+                "blog/rss",
+                new { controller = "Posts", action = "BlogRssFeed" });
+
+            routes.MapRoute(
+                "BlogAtomFeed",
+                "blog/atom",
+                new { controller = "Posts", action = "BlogAtomFeed" });
+
+            routes.MapRoute(
                 "Blog",
                 "blog/{year}/{month}/{day}/{title}",
                 new {controller = "Posts", action = "Blog"},

@@ -1,4 +1,7 @@
-﻿namespace Personal.Website.Controllers
+﻿using System.ServiceModel.Syndication;
+using JamesDibble.ApplicationFramework.Web.Rss;
+
+namespace Personal.Website.Controllers
 {
     using System;
     using System.Web.Mvc;
@@ -69,6 +72,65 @@
             var viewModel = new BlogHeaderViewModel { Year = year, Month = month, Blogs = blogs, Page = page };
 
             return this.View(viewModel);
+        }
+
+        public ActionResult BlogRssFeed()
+        {
+            var feed = BuildFeed();
+
+            return this.RssResult(feed);
+        }
+
+        public ActionResult BlogAtomFeed()
+        {
+            var feed = BuildFeed();
+
+            return this.AtomResult(feed);
+        }
+
+        private SyndicationFeed BuildFeed()
+        {
+            var items = this._postService.GetAllBlogs().OrderByDescending(blog => blog.Date).Select(blog => new SyndicationItem
+            {
+                Title = SyndicationContent.CreatePlaintextContent(blog.Title),
+                Summary = SyndicationContent.CreateHtmlContent(blog.Abstract),
+                PublishDate = blog.Date
+            }).ToList();
+
+            foreach (var syndicationItem in items)
+            {
+                syndicationItem.AddPermalink(
+                    new Uri(
+                        new Uri("http://www.jdibble.co.uk"),
+                        this.Url.Action(
+                            "blog",
+                            "posts",
+                            new
+                            {
+                                year = syndicationItem.PublishDate.Year,
+                                month = syndicationItem.PublishDate.Month,
+                                day = syndicationItem.PublishDate.Day,
+                                title = syndicationItem.Title.Text.ToLowerInvariant().Replace(' ', '-')
+                            })));
+            }
+
+            foreach (var syndicationItem in items)
+            {
+                syndicationItem.Authors.Add(new SyndicationPerson("info@jdibble.co.uk", "James Dibble",
+                    "http://www.jdibble.co.uk"));
+            }
+
+            var feed = new SyndicationFeed(
+                "James Dibble - Blog",
+                "The Ramblings of a .Net Nerd",
+                new Uri("http://www.jdibble.co.uk/blog/rss"),
+                items)
+            {
+                Language = "en-gb",
+                LastUpdatedTime = DateTime.Now
+            };
+
+            return feed;
         }
 
         public ActionResult BlogArchiveTag(int year, int month, string tag, int page)
