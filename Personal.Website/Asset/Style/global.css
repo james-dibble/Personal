@@ -232,9 +232,6 @@ div[data-spy="affix-maybe"].dont-affix {
   overflow: hidden;
   margin-bottom: 0;
 }
-.jumbotron:first-child {
-  margin-top: -46px;
-}
 .jumbotron .container-fluid {
   display: table-cell;
   vertical-align: middle;
@@ -248,9 +245,8 @@ div[data-spy="affix-maybe"].dont-affix {
   color: #fafafa;
   text-align: center;
   font-size: 30px;
-  position: absolute;
-  bottom: 65px;
-  right: 20px;
+  position: relative;
+  bottom: 0;
   cursor: pointer;
   box-shadow: 0 0 10px 3px #bbb;
   overflow: hidden;
@@ -357,6 +353,8 @@ article p {
     margin: auto auto;
     bottom: auto;
     right: auto;
+    top: 40px;
+    float: none !important;
   }
 }
 /*# sourceMappingURL=global.css.map */

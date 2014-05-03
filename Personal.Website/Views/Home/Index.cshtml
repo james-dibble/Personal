@@ -18,10 +18,10 @@
                 by teaching myself guitar.
             </p>
         </div>
-    </div>
-    <div class="scroll-arrow" data-scroll-to="#websites">
-        <i class="fa fa-angle-down"></i>
-        <i class="fa fa-angle-down"></i>
+        <div class="scroll-arrow pull-right" data-scroll-to="#websites">
+            <i class="fa fa-angle-down"></i>
+            <i class="fa fa-angle-down"></i>
+        </div>
     </div>
 </div>
 <div class="jumbotron" id="websites">
@@ -40,10 +40,10 @@
             </p>
             <a href="@this.Url.Action("portfolioarchivetag", "posts", new { tag = "website".ToLower() })" class="btn btn-primary">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
-    </div>
-    <div class="scroll-arrow" data-scroll-to="#apps">
-        <i class="fa fa-angle-down"></i>
-        <i class="fa fa-angle-down"></i>
+        <div class="scroll-arrow pull-right" data-scroll-to="#apps">
+            <i class="fa fa-angle-down"></i>
+            <i class="fa fa-angle-down"></i>
+        </div>
     </div>
 </div>
 <div class="jumbotron primary" id="apps">
@@ -62,10 +62,10 @@
             </p>
             <a href="@this.Url.Action("portfolioarchivetag", "posts", new { tag = "app".ToLower() })" class="btn btn-default">View&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
-    </div>
-    <div class="scroll-arrow" data-scroll-to="#blogging">
-        <i class="fa fa-angle-down"></i>
-        <i class="fa fa-angle-down"></i>
+        <div class="scroll-arrow pull-right" data-scroll-to="#blogging">
+            <i class="fa fa-angle-down"></i>
+            <i class="fa fa-angle-down"></i>
+        </div>
     </div>
 </div>
 <div class="jumbotron" id="blogging">
@@ -83,10 +83,10 @@
             </p>
             <a href="@this.Url.Action("blogarchive", "posts")" class="btn btn-primary">Blog&nbsp;&nbsp;<span class="glyphicon glyphicon-expand"></span></a>
         </div>
-    </div>
-    <div class="scroll-arrow" data-scroll-to="#social">
-        <i class="fa fa-angle-down"></i>
-        <i class="fa fa-angle-down"></i>
+        <div class="scroll-arrow pull-right" data-scroll-to="#social">
+            <i class="fa fa-angle-down"></i>
+            <i class="fa fa-angle-down"></i>
+        </div>
     </div>
 </div>
 <div class="jumbotron primary" id="social">
@@ -131,6 +131,7 @@
                     .animate('#hello p', { duration: $('#hello').height() - 70, property: 'top', end: '+400px' })
                     .animate('#hello h1', { duration: $('#hello').height(), property: 'right', end: '+1500px' })
                     .animate('#hello p', { duration: $('#hello').height() - 70, property: 'left', end: '+1000px' })
+                    .animate('#hello .scroll-arrow', { duration: $('#hello').height(), property: 'top', end: '+200px' })
                     .animate('#websites .col-lg-9', { duration: $('#websites').height() - 70, property: 'right', start: '-1500px' })
                     .animate('#websites .elipse', { duration: $('#websites').height() - 70, property: 'left', start: '-1500px' })
                     .animate('#apps .col-lg-9', { duration: $('#apps').height() - 70, property: 'right', start: '-1500px' })

@@ -199,11 +199,7 @@ div[data-spy="affix-maybe"] {
     width: 100%;
     overflow: hidden;
     margin-bottom: 0;
-
-    &:first-child {
-        margin-top: -46px;
-    }
-
+    
     .container-fluid {
         display: table-cell;
         vertical-align: middle;
@@ -218,9 +214,8 @@ div[data-spy="affix-maybe"] {
         color: @white;
         text-align: center;
         font-size: 30px;
-        position: absolute;
-        bottom: 65px;
-        right: 20px;
+        position: relative;
+        bottom: 0;
         cursor: pointer;
         box-shadow: 0 0 10px 3px #bbb;
         overflow: hidden;
@@ -353,12 +348,14 @@ article {
         .container-fluid {
             display: block;
         }
-
+        
         .scroll-arrow {
             position: relative;
             margin: auto auto;
             bottom: auto;
             right: auto;
+            top: 40px;
+            float: none !important;
         }
     }
 }
