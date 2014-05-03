@@ -28,10 +28,13 @@ $(function () {
 
         if (target.hasClass('out')) {
             target.removeClass('out');
+            $('#wrap').removeClass('out');
+
             return;
         }
 
         target.addClass('out');
+        $('#wrap').addClass('out');
     });
 
     $('html').click(function () {
@@ -39,6 +42,7 @@ $(function () {
 
         if (target.hasClass('out')) {
             target.removeClass('out');
+            $('#wrap').removeClass('out');
         }
     });
 

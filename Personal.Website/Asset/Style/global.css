@@ -1,5 +1,6 @@
 ﻿html {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 html,
 body {
@@ -90,6 +91,9 @@ footer .scroll-arrow:hover i:last-child {
   width: 165px;
   z-index: 1030;
   background: #fafafa;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 #sidebar.out {
@@ -121,9 +125,19 @@ footer .scroll-arrow:hover i:last-child {
 }
 #wrap {
   padding-top: 120px;
+  margin-left: 0;
+  margin-right: 0;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 #wrap > .container-fluid {
   margin-top: -73px;
+}
+#wrap.out {
+  margin-left: 82.5px;
+  margin-right: -82.5px;
 }
 .at4m-menu {
   top: 50px;
