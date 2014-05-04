@@ -127,7 +127,8 @@ namespace Personal.Website.Controllers
                 items)
             {
                 Language = "en-gb",
-                LastUpdatedTime = DateTime.Now
+                LastUpdatedTime = DateTime.Now,
+                ImageUrl = new Uri("http://asset.jdibble.co.uk/image/favicon.ico")
             };
 
             return feed;
