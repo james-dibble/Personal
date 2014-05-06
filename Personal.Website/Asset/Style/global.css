@@ -57,7 +57,7 @@ footer .scroll-arrow:hover i:last-child {
 .nav-stacked li a {
   border-radius: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   footer {
     height: 50px;
   }
