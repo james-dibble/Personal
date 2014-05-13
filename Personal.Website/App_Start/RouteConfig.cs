@@ -14,11 +14,16 @@
                 "Home",
                 "",
                 new { controller = "Home", action = "Index" });
-                                                
+
             routes.MapRoute(
                 "Contact",
                 "contact",
-                new {controller = "Home", action = "Contact"});
+                new { controller = "Home", action = "Contact" });
+
+            routes.MapRoute(
+                "SendMessage",
+                "send-message",
+                new { controller = "Home", action = "SendMessage" });
 
             routes.MapRoute(
                 "BlogArchive",
