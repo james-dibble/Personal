@@ -36,10 +36,14 @@ namespace Personal.Website.Controllers
             try
             {
                 var mailMessage = new MailMessage(
-                email,
+                "mailer@jdibble.co.uk",
                 "info@jdibble.co.uk",
                 string.Format(CultureInfo.CurrentCulture, @"Message from Contact Page: {0}", subject),
-                string.Format(CultureInfo.CurrentCulture, @"Website: {0}<br /><br />Message:<br />{1}", website, message)) { IsBodyHtml = true };
+                string.Format(CultureInfo.CurrentCulture, @"Return Address: {2}<br /><br />Website: {0}<br /><br />Message:<br />{1}", website, message, email))
+                {
+                    IsBodyHtml = true
+                };
+
                 new SmtpClient().Send(mailMessage);
             }
             catch (Exception)
