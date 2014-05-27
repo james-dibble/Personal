@@ -3,25 +3,19 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Net.Mail;
 using System.Web.Mvc;
-using Personal.ServiceLayer;
 using Personal.Website.ViewModels;
 
 namespace Personal.Website.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IPostService _postService;
-        
-        public HomeController(IPostService postService)
-        {
-            this._postService = postService;
-        }
-
+        [OutputCache(Duration = 604800)]
         public ActionResult Index()
         {
             return this.View();
         }
 
+        [OutputCache(Duration = 604800)]
         public ActionResult Contact()
         {
             var viewModel = new ContactViewModel(string.Empty);

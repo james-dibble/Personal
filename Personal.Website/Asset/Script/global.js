@@ -7,6 +7,23 @@ _gaq.push(['_trackPageview']);
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
+addthis.layers({
+    'theme': 'transparent',
+    'share': {
+        'position': 'left',
+        'numPreferredServices': 5,
+        'offset': { 'bottom': '32px' }
+    },
+    'follow': {
+        'services': [
+          { 'service': 'twitter', 'id': 'dibble_james' },
+          { 'service': 'linkedin', 'id': 'dibblejames' },
+          { 'service': 'google_follow', 'id': '104250015987511319684/posts' },
+          { 'service': 'rss', 'id': 'http://www.jdibble.co.uk/blog/rss' }
+        ]
+    }
+});
+
 /* Modernizr 2.7.1 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-shiv-cssclasses-teststyles-css_vhunit-load
  */

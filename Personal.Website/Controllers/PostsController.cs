@@ -65,6 +65,7 @@ namespace Personal.Website.Controllers
                 });
         }
 
+        [OutputCache(Duration = 3600)]
         public ActionResult BlogArchive(int year, int month, int page)
         {
             var blogs = this._postService.GetBlogs(year, month).OrderByDescending(b => b.Date);
@@ -161,6 +162,7 @@ namespace Personal.Website.Controllers
             return this.PartialView(viewModel);
         }
 
+        [OutputCache(Duration = 604800)]
         public ActionResult Blog(int year, int month, int day, string title)
         {
             var blog = this._postService.GetBlog(new DateTime(year, month, day), title.Replace('-', ' '));
@@ -200,6 +202,7 @@ namespace Personal.Website.Controllers
             return this.RedirectToAction("WriteBlog", "Posts", new { id = savedBlog.Id });
         }
 
+        [OutputCache(Duration = 3600)]
         public ActionResult PortfolioArchive()
         {
             var portfolios = this._postService.GetAllPortfolios().OrderByDescending(p => p.Date);
@@ -207,6 +210,7 @@ namespace Personal.Website.Controllers
             return this.View(portfolios);
         }
 
+        [OutputCache(Duration = 3600)]
         public ActionResult PortfolioArchiveTag(string tag)
         {
             var portfolios = this._postService.GetPortfolios(tag).OrderByDescending(p => p.Date);
@@ -214,6 +218,7 @@ namespace Personal.Website.Controllers
             return this.View("PortfolioArchive", portfolios);
         }
 
+        [OutputCache(Duration = 604800)]
         public ActionResult Portfolio(int year, int month, int day, string title)
         {
             var portfolio = this._postService.GetPortfolio(new DateTime(year, month, day), title.Replace('-', ' '));
